@@ -1,0 +1,47 @@
+
+:root {
+    --color-bg-1: #0E141C;
+    --color-bg-2: #171328;
+    --color-cyan: #4FD1E8;
+    --color-violet: #A86BFF;
+    --color-blue: #2F80ED;
+    --color-text: #F2F4F8;
+    --color-text-soft: #A9B4C7;
+    --gradient-main: linear-gradient(135deg, var(--color-cyan), var(--color-violet));
+    --glass: rgba(255, 255, 255, 0.05);
+    --font-title: "Barlow Condensed", sans-serif;
+    --font-body: "Barlow", sans-serif;
+    --radius: 14px;
+    --transition: 0.3s ease;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background: linear-gradient(135deg, var(--color-bg-1), var(--color-bg-2));
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
