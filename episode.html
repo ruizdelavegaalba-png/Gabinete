@@ -25,8 +25,44 @@
         <span class="header__loader" aria-hidden="true"></span>
     </header>
 
-    <main class="main">
-        <h1>Why Are Flamingos Pink?</h1>
+    <main class="main layout">
+        <aside class="sidebar">
+            <a class="sidebar__img-link" href="podcast.html">
+                <img class="sidebar__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/01.jpg" alt="Cover of Why Is That?">
+            </a>
+            <div class="sidebar__block">
+                <p class="sidebar__title"><a class="sidebar__link" href="podcast.html">Why Is That?</a></p>
+                <p class="sidebar__author"><a class="sidebar__link" href="podcast.html">by Curious Mind</a></p>
+            </div>
+            <div class="sidebar__block">
+                <h2 class="sidebar__label">Description</h2>
+                <p class="sidebar__desc">Everyday questions with surprising answers. Every week we solve a “why?” you never dared to look up.</p>
+            </div>
+        </aside>
+
+        <article class="episode">
+            <p class="episode__tag">Episode 10</p>
+            <h1 class="episode__title">Why Are Flamingos Pink?</h1>
+
+            <div class="episode__desc">
+                <p>Flamingos are born grey. Their pink colour comes from what they eat: tiny shrimp and algae rich in <strong>carotenoids</strong>, the same pigments that give carrots their colour.</p>
+                <p>In this episode we travel to the salt marshes of Doñana to see how their diet changes their feathers. Learn more on <a href="https://en.wikipedia.org/wiki/Flamingo">Wikipedia</a> or listen to more episodes of <a href="podcast.html">Why Is That?</a>.</p>
+            </div>
+
+            <audio class="episode__audio" controls preload="metadata" aria-label="Episode: Why Are Flamingos Pink?">
+                <source src="https://res.cloudinary.com/TU_CUENTA/video/upload/gabinete/flamingos.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <details class="transcript">
+                <summary class="transcript__summary">Read transcript</summary>
+                <div class="transcript__body">
+                    <p><strong>Host:</strong> Welcome to Why Is That?, the podcast that answers the questions nobody asks out loud.</p>
+                    <p><strong>Host:</strong> Today we are talking about flamingos. Did you know they are born grey?</p>
+                    <p><strong>Guest:</strong> That’s right. Their pink colour comes entirely from their food.</p>
+                </div>
+            </details>
+        </article>
     </main>
 </body>
 </html>
