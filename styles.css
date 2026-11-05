@@ -414,8 +414,6 @@ a:focus-visible {
 .table__link:active {
     color: var(--color-violet);
 }
-
-
 .sidebar__img-link {
     display: block;
     width: fit-content;
