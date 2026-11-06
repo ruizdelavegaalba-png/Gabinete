@@ -28,6 +28,17 @@
     <main class="main">
         <h1 class="visually-hidden">Podcasts</h1>
 
+        <section class="featured" aria-labelledby="featured-title">
+            <img class="featured__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/featured.jpg" alt="Flamingos standing in shallow water">
+            <div class="featured__content">
+                <p class="featured__tag">Featured episode</p>
+                <h2 class="featured__title" id="featured-title">Why Are Flamingos Pink?</h2>
+                <p class="featured__meta">Why Is That? · 20/8/2026 · 23:11</p>
+                <p class="featured__desc">Flamingos are born grey. Discover how their diet turns them pink in this trip to the salt marshes of Doñana.</p>
+                <a class="featured__btn" href="episode.html">Listen now</a>
+            </div>
+        </section>
+
         <div class="toolbar">
             <span class="toolbar__badge">12<span class="visually-hidden"> podcasts</span></span>
             <label class="visually-hidden" for="search">Search podcasts</label>
@@ -155,8 +166,20 @@
                 </a>
             </article>
         </section>
+
+        <section class="topics" aria-labelledby="topics-title">
+            <h2 class="topics__title" id="topics-title">Popular categories</h2>
+            <ul class="topics__list">
+                <li><a class="topics__link" href="categories.html">Science</a></li>
+                <li><a class="topics__link" href="categories.html">History</a></li>
+                <li><a class="topics__link" href="categories.html">Nature</a></li>
+                <li><a class="topics__link" href="categories.html">Language</a></li>
+                <li><a class="topics__link" href="categories.html">Human body</a></li>
+                <li><a class="topics__link" href="categories.html">Space</a></li>
+            </ul>
+        </section>
     </main>
-</body>
+
     <footer class="footer">
         <div class="footer__inner">
             <a class="footer__logo" href="index.html">Gabinete</a>
@@ -175,8 +198,9 @@
         </div>
 
         <div class="footer__bottom">
-            <p class="footer__credits">Alba Ruiz de la Vega.</p>
-            <p class="footer__copy">© 2026 Gabinete </p>
+            <p class="footer__credits">Audio: royalty-free music from Pixabay (Pixabay Content License). Images and audio hosted on Cloudinary.</p>
+            <p class="footer__copy">© 2026 Gabinete · DIW project · CEI</p>
         </div>
     </footer>
+</body>
 </html>
