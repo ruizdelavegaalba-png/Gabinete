@@ -288,10 +288,6 @@ summary:focus-visible {
     color: var(--colorTexto);
 }
 
-.logoPie {
-    font-size: 1.6rem;
-}
-
 .menu {
     margin-left: auto;
 }
@@ -695,32 +691,15 @@ summary:focus-visible {
 
 .pie {
     margin-top: 4rem;
-    padding: 2.5rem 7.5vw 1.5rem;
+    padding: 1.5rem 7.5vw;
+    text-align: center;
     background: var(--cristal);
     border-top: 1px solid var(--bordeCristal);
 }
 
-.pieSuperior {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
-}
-
-.pieLista {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-.pieInferior {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    margin-top: 2rem;
-    padding-top: 1.2rem;
-    border-top: 1px solid var(--bordeCristal);
+.pieTexto {
+    font-size: 0.85rem;
+    color: var(--colorTextoSuave);
 }
 
 @media (max-width: 1024px) {
@@ -821,10 +800,5 @@ summary:focus-visible {
     .tabla td {
         padding: 0.7rem 0.5rem;
         font-size: 0.9rem;
-    }
-
-    .pieSuperior {
-        flex-direction: column;
-        align-items: flex-start;
     }
 }
