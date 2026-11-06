@@ -1,205 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gabinete: podcasts about science, history and curiosities.">
-    <title>Gabinete · Home</title>
+    <meta name="description" content="Gabinete: podcasts de ciencia, historia y curiosidades.">
+    <title>Gabinete · Inicio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <a class="header__logo" href="index.html">Gabinete</a>
-        <nav class="nav" aria-label="Main menu">
-            <ul class="nav__list">
-                <li><a class="nav__link" href="index.html" aria-current="page">Home</a></li>
-                <li><a class="nav__link" href="categories.html">Categories</a></li>
-                <li><a class="nav__link" href="library.html">Library</a></li>
-                <li><a class="nav__link" href="authors.html">Authors</a></li>
-                <li><a class="nav__link" href="about.html">About</a></li>
+    <header class="cabecera">
+        <a class="logo" href="index.html">Gabinete</a>
+        <nav class="menu" aria-label="Menú principal">
+            <ul class="menuLista">
+                <li><a class="navEnlace activo" href="index.html" aria-current="page">Inicio</a></li>
+                <li><a class="navEnlace" href="categories.html">Categorías</a></li>
+                <li><a class="navEnlace" href="library.html">Biblioteca</a></li>
+                <li><a class="navEnlace" href="authors.html">Autores</a></li>
+                <li><a class="navEnlace" href="about.html">Nosotros</a></li>
             </ul>
         </nav>
-        <span class="header__loader" aria-hidden="true"></span>
+        <span class="loader" aria-hidden="true"></span>
     </header>
 
-    <main class="main">
-        <h1 class="visually-hidden">Podcasts</h1>
+    <main class="principal">
+        <h1 class="soloLector">Podcasts</h1>
 
-        <section class="featured" aria-labelledby="featured-title">
-            <img class="featured__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/featured.jpg" alt="Flamingos standing in shallow water">
-            <div class="featured__content">
-                <p class="featured__tag">Featured episode</p>
-                <h2 class="featured__title" id="featured-title">Why Are Flamingos Pink?</h2>
-                <p class="featured__meta">Why Is That? · 20/8/2026 · 23:11</p>
-                <p class="featured__desc">Flamingos are born grey. Discover how their diet turns them pink in this trip to the salt marshes of Doñana.</p>
-                <a class="featured__btn" href="episode.html">Listen now</a>
+        <section class="caja destacado" aria-labelledby="tituloDestacado">
+            <img class="portada destacadoImagen" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/featured.jpg" alt="Flamencos de pie en aguas poco profundas">
+            <div class="destacadoInfo">
+                <p class="etiqueta">Episodio destacado</p>
+                <h2 class="titulo tituloGrande" id="tituloDestacado">¿Por qué los flamencos son rosas?</h2>
+                <p class="textoSuave">¿Y eso por qué? · 20/8/2026 · 23:11</p>
+                <p class="textoSuave anchoLectura">Los flamencos nacen grises. Descubre cómo su dieta los vuelve rosas en este viaje a las marismas de Doñana.</p>
+                <a class="boton" href="episode.html">Escuchar ahora</a>
             </div>
         </section>
 
-        <div class="toolbar">
-            <span class="toolbar__badge">12<span class="visually-hidden"> podcasts</span></span>
-            <label class="visually-hidden" for="search">Search podcasts</label>
-            <input class="toolbar__search" type="search" id="search" placeholder="Filter podcasts...">
+        <div class="caja barraBusqueda">
+            <span class="numero">12<span class="soloLector"> podcasts</span></span>
+            <label class="soloLector" for="buscar">Buscar podcasts</label>
+            <input class="campo buscador" type="search" id="buscar" placeholder="Filtrar podcasts...">
         </div>
 
-        <section class="grid" aria-label="Podcast list">
-            <article class="card">
-                <a class="card__link" href="podcast.html">
-                    <img class="card__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/01.jpg" alt="Cover of Why Is That?">
-                    <div class="card__text">
-                        <h2 class="card__title">Why Is That?</h2>
-                        <p class="card__author">Author: Curious Mind</p>
+        <section class="rejilla rejillaPodcasts" aria-label="Lista de podcasts">
+            <article class="caja tarjeta">
+                <a class="tarjetaEnlace" href="podcast.html">
+                    <img class="portada tarjetaImagen" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/01.jpg" alt="Portada de ¿Y eso por qué?">
+                    <div>
+                        <h2 class="titulo tarjetaTitulo">¿Y eso por qué?</h2>
+                        <p class="textoSuave textoPequeno">Autor: Mente Curiosa</p>
                     </div>
                 </a>
             </article>
 
-            <article class="card">
-                <a class="card__link" href="podcast.html">
-                    <img class="card__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/02.jpg" alt="Cover of Myths Under the Microscope">
-                    <div class="card__text">
-                        <h2 class="card__title">Myths Under the Microscope</h2>
-                        <p class="card__author">Author: Pocket Lab</p>
+            <article class="caja tarjeta">
+                <a class="tarjetaEnlace" href="podcast.html">
+                    <img class="portada tarjetaImagen" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/02.jpg" alt="Portada de Mitos al microscopio">
+                    <div>
+                        <h2 class="titulo tarjetaTitulo">Mitos al microscopio</h2>
+                        <p class="textoSuave textoPequeno">Autor: Laboratorio de Bolsillo</p>
                     </div>
                 </a>
             </article>
 
-            <article class="card">
-                <a class="card__link" href="podcast.html">
-                    <img class="card__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/03.jpg" alt="Cover of Objects with a Story">
-                    <div class="card__text">
-                        <h2 class="card__title">Objects with a Story</h2>
-                        <p class="card__author">Author: Imaginary Museum</p>
+            <article class="caja tarjeta">
+                <a class="tarjetaEnlace" href="podcast.html">
+                    <img class="portada tarjetaImagen" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/03.jpg" alt="Portada de Objetos con historia">
+                    <div>
+                        <h2 class="titulo tarjetaTitulo">Objetos con historia</h2>
+                        <p class="textoSuave textoPequeno">Autor: Museo Imaginario</p>
                     </div>
                 </a>
             </article>
 
-            <article class="card">
-                <a class="card__link" href="podcast.html">
-                    <img class="card__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/04.jpg" alt="Cover of The Platypus Corner">
-                    <div class="card__text">
-                        <h2 class="card__title">The Platypus Corner</h2>
-                        <p class="card__author">Author: Rare Fauna</p>
+            <article class="caja tarjeta">
+                <a class="tarjetaEnlace" href="podcast.html">
+                    <img class="portada tarjetaImagen" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/04.jpg" alt="Portada de El rincón del ornitorrinco">
+                    <div>
+                        <h2 class="titulo tarjetaTitulo">El rincón del ornitorrinco</h2>
+                        <p class="textoSuave textoPequeno">Autor: Fauna Rara</p>
                     </div>
                 </a>
             </article>
 
-            <article class="card">
-                <a class="card__link" href="podcast.html">
-                    <img class="card__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/05.jpg" alt="Cover of Failed Inventions">
-                    <div class="card__text">
-                        <h2 class="card__title">Failed Inventions</h2>
-                        <p class="card__author">Author: Crooked Workshop</p>
+            <article class="caja tarjeta">
+                <a class="tarjetaEnlace" href="podcast.html">
+                    <img class="portada tarjetaImagen" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/05.jpg" alt="Portada de Inventos fallidos">
+                    <div>
+                        <h2 class="titulo tarjetaTitulo">Inventos fallidos</h2>
+                        <p class="textoSuave textoPequeno">Autor: Taller Torcido</p>
                     </div>
                 </a>
             </article>
 
-            <article class="card">
-                <a class="card__link" href="podcast.html">
-                    <img class="card__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/06.jpg" alt="Cover of Travelling Words">
-                    <div class="card__text">
-                        <h2 class="card__title">Travelling Words</h2>
-                        <p class="card__author">Author: Loose Tongue</p>
+            <article class="caja tarjeta">
+                <a class="tarjetaEnlace" href="podcast.html">
+                    <img class="portada tarjetaImagen" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/06.jpg" alt="Portada de Palabras viajeras">
+                    <div>
+                        <h2 class="titulo tarjetaTitulo">Palabras viajeras</h2>
+                        <p class="textoSuave textoPequeno">Autor: Lengua Suelta</p>
                     </div>
                 </a>
             </article>
 
-            <article class="card">
-                <a class="card__link" href="podcast.html">
-                    <img class="card__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/07.jpg" alt="Cover of Map Mysteries">
-                    <div class="card__text">
-                        <h2 class="card__title">Map Mysteries</h2>
-                        <p class="card__author">Author: Curious Atlas</p>
+            <article class="caja tarjeta">
+                <a class="tarjetaEnlace" href="podcast.html">
+                    <img class="portada tarjetaImagen" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/07.jpg" alt="Portada de Misterios del mapa">
+                    <div>
+                        <h2 class="titulo tarjetaTitulo">Misterios del mapa</h2>
+                        <p class="textoSuave textoPequeno">Autor: Atlas Curioso</p>
                     </div>
                 </a>
             </article>
 
-            <article class="card">
-                <a class="card__link" href="podcast.html">
-                    <img class="card__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/08.jpg" alt="Cover of Kitchen Science">
-                    <div class="card__text">
-                        <h2 class="card__title">Kitchen Science</h2>
-                        <p class="card__author">Author: Chemistry in the Pot</p>
+            <article class="caja tarjeta">
+                <a class="tarjetaEnlace" href="podcast.html">
+                    <img class="portada tarjetaImagen" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/08.jpg" alt="Portada de Ciencia en la cocina">
+                    <div>
+                        <h2 class="titulo tarjetaTitulo">Ciencia en la cocina</h2>
+                        <p class="textoSuave textoPequeno">Autor: Química en la Olla</p>
                     </div>
                 </a>
             </article>
 
-            <article class="card">
-                <a class="card__link" href="podcast.html">
-                    <img class="card__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/09.jpg" alt="Cover of The Human Body: A User Manual">
-                    <div class="card__text">
-                        <h2 class="card__title">The Human Body: A User Manual</h2>
-                        <p class="card__author">Author: Dr. Magnifier</p>
+            <article class="caja tarjeta">
+                <a class="tarjetaEnlace" href="podcast.html">
+                    <img class="portada tarjetaImagen" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/09.jpg" alt="Portada de El cuerpo humano: manual de usuario">
+                    <div>
+                        <h2 class="titulo tarjetaTitulo">El cuerpo humano: manual de usuario</h2>
+                        <p class="textoSuave textoPequeno">Autor: Dr. Lupa</p>
                     </div>
                 </a>
             </article>
 
-            <article class="card">
-                <a class="card__link" href="podcast.html">
-                    <img class="card__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/10.jpg" alt="Cover of Bugs Are Cool">
-                    <div class="card__text">
-                        <h2 class="card__title">Bugs Are Cool</h2>
-                        <p class="card__author">Author: Pop Entomology</p>
+            <article class="caja tarjeta">
+                <a class="tarjetaEnlace" href="podcast.html">
+                    <img class="portada tarjetaImagen" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/10.jpg" alt="Portada de Los bichos molan">
+                    <div>
+                        <h2 class="titulo tarjetaTitulo">Los bichos molan</h2>
+                        <p class="textoSuave textoPequeno">Autor: Entomología Pop</p>
                     </div>
                 </a>
             </article>
 
-            <article class="card">
-                <a class="card__link" href="podcast.html">
-                    <img class="card__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/11.jpg" alt="Cover of 19th-Century News">
-                    <div class="card__text">
-                        <h2 class="card__title">19th-Century News</h2>
-                        <p class="card__author">Author: Living Archive</p>
+            <article class="caja tarjeta">
+                <a class="tarjetaEnlace" href="podcast.html">
+                    <img class="portada tarjetaImagen" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/11.jpg" alt="Portada de Noticias del siglo XIX">
+                    <div>
+                        <h2 class="titulo tarjetaTitulo">Noticias del siglo XIX</h2>
+                        <p class="textoSuave textoPequeno">Autor: Archivo Vivo</p>
                     </div>
                 </a>
             </article>
 
-            <article class="card">
-                <a class="card__link" href="podcast.html">
-                    <img class="card__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/12.jpg" alt="Cover of Pocket Sky">
-                    <div class="card__text">
-                        <h2 class="card__title">Pocket Sky</h2>
-                        <p class="card__author">Author: Slow Orbit</p>
+            <article class="caja tarjeta">
+                <a class="tarjetaEnlace" href="podcast.html">
+                    <img class="portada tarjetaImagen" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/12.jpg" alt="Portada de Cielo de bolsillo">
+                    <div>
+                        <h2 class="titulo tarjetaTitulo">Cielo de bolsillo</h2>
+                        <p class="textoSuave textoPequeno">Autor: Órbita Lenta</p>
                     </div>
                 </a>
             </article>
         </section>
 
-        <section class="topics" aria-labelledby="topics-title">
-            <h2 class="topics__title" id="topics-title">Popular categories</h2>
-            <ul class="topics__list">
-                <li><a class="topics__link" href="categories.html">Science</a></li>
-                <li><a class="topics__link" href="categories.html">History</a></li>
-                <li><a class="topics__link" href="categories.html">Nature</a></li>
-                <li><a class="topics__link" href="categories.html">Language</a></li>
-                <li><a class="topics__link" href="categories.html">Human body</a></li>
-                <li><a class="topics__link" href="categories.html">Space</a></li>
+        <section class="seccion" aria-labelledby="tituloTemas">
+            <h2 class="titulo tituloMediano resaltado" id="tituloTemas">Categorías populares</h2>
+            <ul class="listaTemas">
+                <li><a class="pastilla" href="categories.html#ciencia">Ciencia</a></li>
+                <li><a class="pastilla" href="categories.html#historia">Historia</a></li>
+                <li><a class="pastilla" href="categories.html#naturaleza">Naturaleza</a></li>
+                <li><a class="pastilla" href="categories.html#lenguaje">Lenguaje</a></li>
+                <li><a class="pastilla" href="categories.html#cuerpo">Cuerpo humano</a></li>
+                <li><a class="pastilla" href="categories.html#espacio">Espacio</a></li>
             </ul>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer__inner">
-            <a class="footer__logo" href="index.html">Gabinete</a>
+    <footer class="pie">
+        <div class="pieSuperior">
+            <a class="logo logoPie" href="index.html">Gabinete</a>
 
-            <nav class="footer__nav" aria-label="Footer menu">
-                <ul class="footer__list">
-                    <li><a class="footer__link" href="index.html">Home</a></li>
-                    <li><a class="footer__link" href="categories.html">Categories</a></li>
-                    <li><a class="footer__link" href="library.html">Library</a></li>
-                    <li><a class="footer__link" href="authors.html">Authors</a></li>
-                    <li><a class="footer__link" href="about.html">About</a></li>
+            <nav aria-label="Menú del pie">
+                <ul class="pieLista">
+                    <li><a class="enlace textoSuave" href="index.html">Inicio</a></li>
+                    <li><a class="enlace textoSuave" href="categories.html">Categorías</a></li>
+                    <li><a class="enlace textoSuave" href="library.html">Biblioteca</a></li>
+                    <li><a class="enlace textoSuave" href="authors.html">Autores</a></li>
+                    <li><a class="enlace textoSuave" href="about.html">Nosotros</a></li>
                 </ul>
             </nav>
 
-            <a class="footer__link" href="https://github.com/ruizdelavegaalba-png/Gabinete">GitHub</a>
+            <a class="enlace textoSuave" href="https://github.com/ruizdelavegaalba-png/Gabinete">GitHub</a>
         </div>
 
-        <div class="footer__bottom">
-            <p class="footer__credits">Audio: royalty-free music from Pixabay (Pixabay Content License). Images and audio hosted on Cloudinary.</p>
-            <p class="footer__copy">© 2026 Gabinete · DIW project · CEI</p>
+        <div class="pieInferior textoSuave textoPequeno">
+            <p>Audio: música libre de derechos de Pixabay (Licencia de contenido de Pixabay). Imágenes y audio alojados en Cloudinary.</p>
+            <p>© 2026 Gabinete · Proyecto de DIW · CEI</p>
         </div>
     </footer>
 </body>

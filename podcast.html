@@ -1,106 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gabinete: podcasts about science, history and curiosities.">
-    <title>Gabinete · Why Is That?</title>
+    <meta name="description" content="¿Y eso por qué?: preguntas cotidianas con respuestas sorprendentes, en Gabinete.">
+    <title>Gabinete · ¿Y eso por qué?</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <a class="header__logo" href="index.html">Gabinete</a>
-        <nav class="nav" aria-label="Main menu">
-            <ul class="nav__list">
-                <li><a class="nav__link" href="index.html">Home</a></li>
-                <li><a class="nav__link" href="categories.html">Categories</a></li>
-                <li><a class="nav__link" href="library.html">Library</a></li>
-                <li><a class="nav__link" href="authors.html">Authors</a></li>
-                <li><a class="nav__link" href="about.html">About</a></li>
+    <header class="cabecera">
+        <a class="logo" href="index.html">Gabinete</a>
+        <nav class="menu" aria-label="Menú principal">
+            <ul class="menuLista">
+                <li><a class="navEnlace" href="index.html">Inicio</a></li>
+                <li><a class="navEnlace" href="categories.html">Categorías</a></li>
+                <li><a class="navEnlace" href="library.html">Biblioteca</a></li>
+                <li><a class="navEnlace" href="authors.html">Autores</a></li>
+                <li><a class="navEnlace" href="about.html">Nosotros</a></li>
             </ul>
         </nav>
-        <span class="header__loader" aria-hidden="true"></span>
+        <span class="loader" aria-hidden="true"></span>
     </header>
 
-    <main class="main layout">
-        <aside class="sidebar">
-            <img class="sidebar__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/01.jpg" alt="Cover of Why Is That?">
-            <div class="sidebar__block">
-                <h1 class="sidebar__title">Why Is That?</h1>
-                <p class="sidebar__author">by Curious Mind</p>
+    <main class="principal columnas">
+        <aside class="caja lateral">
+            <img class="portada lateralImagen" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/01.jpg" alt="Portada de ¿Y eso por qué?">
+            <div class="lateralBloque">
+                <h1 class="titulo tituloMediano">¿Y eso por qué?</h1>
+                <p class="textoSuave cursiva">por Mente Curiosa</p>
             </div>
-            <div class="sidebar__block">
-                <h2 class="sidebar__label">Description</h2>
-                <p class="sidebar__desc">Everyday questions with surprising answers. Every week we solve a “why?” you never dared to look up.</p>
+            <div class="lateralBloque">
+                <h2 class="etiqueta">Descripción</h2>
+                <p class="textoSuave">Preguntas cotidianas con respuestas sorprendentes. Cada semana resolvemos un «¿por qué?» que nunca te atreviste a buscar.</p>
             </div>
         </aside>
 
-        <section class="episodes" aria-labelledby="episodes-title">
-            <h2 class="episodes__count" id="episodes-title">Episodes: <span class="episodes__number">10</span></h2>
+        <section class="contenido" aria-labelledby="tituloEpisodios">
+            <h2 class="caja titulo tituloMediano contadorEpisodios" id="tituloEpisodios">Episodios: <span class="resaltado">10</span></h2>
 
-            <div class="episodes__table-wrapper">
-                <table class="table">
-                    <caption class="visually-hidden">Episodes of Why Is That?</caption>
+            <div class="caja tablaCaja">
+                <table class="tabla">
+                    <caption class="soloLector">Episodios de ¿Y eso por qué?</caption>
                     <thead>
                         <tr>
-                            <th scope="col">Title</th>
-                            <th scope="col">Date</th>
-                            <th scope="col" class="table__duration">Duration</th>
+                            <th class="etiqueta" scope="col">Título</th>
+                            <th class="etiqueta" scope="col">Fecha</th>
+                            <th class="etiqueta derecha" scope="col">Duración</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><a class="table__link" href="episode.html">Why Is the Sky Blue?</a></td>
+                            <td><a class="enlace" href="episode.html">¿Por qué el cielo es azul?</a></td>
                             <td>22/10/2026</td>
-                            <td class="table__duration">24:15</td>
+                            <td class="derecha">24:15</td>
                         </tr>
                         <tr>
-                            <td><a class="table__link" href="episode.html">Why Do We Yawn?</a></td>
+                            <td><a class="enlace" href="episode.html">¿Por qué bostezamos?</a></td>
                             <td>15/10/2026</td>
-                            <td class="table__duration">19:42</td>
+                            <td class="derecha">19:42</td>
                         </tr>
                         <tr>
-                            <td><a class="table__link" href="episode.html">Why Do Cats Purr?</a></td>
+                            <td><a class="enlace" href="episode.html">¿Por qué ronronean los gatos?</a></td>
                             <td>8/10/2026</td>
-                            <td class="table__duration">21:08</td>
+                            <td class="derecha">21:08</td>
                         </tr>
                         <tr>
-                            <td><a class="table__link" href="episode.html">Why Do Onions Make Us Cry?</a></td>
+                            <td><a class="enlace" href="episode.html">¿Por qué la cebolla nos hace llorar?</a></td>
                             <td>1/10/2026</td>
-                            <td class="table__duration">17:33</td>
+                            <td class="derecha">17:33</td>
                         </tr>
                         <tr>
-                            <td><a class="table__link" href="episode.html">Why Is the Sea Salty?</a></td>
+                            <td><a class="enlace" href="episode.html">¿Por qué el mar es salado?</a></td>
                             <td>24/9/2026</td>
-                            <td class="table__duration">26:50</td>
+                            <td class="derecha">26:50</td>
                         </tr>
                         <tr>
-                            <td><a class="table__link" href="episode.html">Why Do Our Fingers Wrinkle in Water?</a></td>
+                            <td><a class="enlace" href="episode.html">¿Por qué se nos arrugan los dedos en el agua?</a></td>
                             <td>17/9/2026</td>
-                            <td class="table__duration">15:27</td>
+                            <td class="derecha">15:27</td>
                         </tr>
                         <tr>
-                            <td><a class="table__link" href="episode.html">Why Do Zebras Have Stripes?</a></td>
+                            <td><a class="enlace" href="episode.html">¿Por qué las cebras tienen rayas?</a></td>
                             <td>10/9/2026</td>
-                            <td class="table__duration">22:04</td>
+                            <td class="derecha">22:04</td>
                         </tr>
                         <tr>
-                            <td><a class="table__link" href="episode.html">Why Does Ice Float?</a></td>
+                            <td><a class="enlace" href="episode.html">¿Por qué flota el hielo?</a></td>
                             <td>3/9/2026</td>
-                            <td class="table__duration">18:19</td>
+                            <td class="derecha">18:19</td>
                         </tr>
                         <tr>
-                            <td><a class="table__link" href="episode.html">Why Do We Get Hiccups?</a></td>
+                            <td><a class="enlace" href="episode.html">¿Por qué nos da hipo?</a></td>
                             <td>27/8/2026</td>
-                            <td class="table__duration">20:46</td>
+                            <td class="derecha">20:46</td>
                         </tr>
                         <tr>
-                            <td><a class="table__link" href="episode.html">Why Are Flamingos Pink?</a></td>
+                            <td><a class="enlace" href="episode.html">¿Por qué los flamencos son rosas?</a></td>
                             <td>20/8/2026</td>
-                            <td class="table__duration">23:11</td>
+                            <td class="derecha">23:11</td>
                         </tr>
                     </tbody>
                 </table>

@@ -1,65 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gabinete: podcasts about science, history and curiosities.">
-    <title>Gabinete · Flamingos</title>
+    <meta name="description" content="¿Por qué los flamencos son rosas? Escucha el episodio 10 de ¿Y eso por qué? en Gabinete.">
+    <title>Gabinete · Flamencos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <a class="header__logo" href="index.html">Gabinete</a>
-        <nav class="nav" aria-label="Main menu">
-            <ul class="nav__list">
-                <li><a class="nav__link" href="index.html">Home</a></li>
-                <li><a class="nav__link" href="categories.html">Categories</a></li>
-                <li><a class="nav__link" href="library.html">Library</a></li>
-                <li><a class="nav__link" href="authors.html">Authors</a></li>
-                <li><a class="nav__link" href="about.html">About</a></li>
+    <header class="cabecera">
+        <a class="logo" href="index.html">Gabinete</a>
+        <nav class="menu" aria-label="Menú principal">
+            <ul class="menuLista">
+                <li><a class="navEnlace" href="index.html">Inicio</a></li>
+                <li><a class="navEnlace" href="categories.html">Categorías</a></li>
+                <li><a class="navEnlace" href="library.html">Biblioteca</a></li>
+                <li><a class="navEnlace" href="authors.html">Autores</a></li>
+                <li><a class="navEnlace" href="about.html">Nosotros</a></li>
             </ul>
         </nav>
-        <span class="header__loader" aria-hidden="true"></span>
+        <span class="loader" aria-hidden="true"></span>
     </header>
 
-    <main class="main layout">
-        <aside class="sidebar">
-            <a class="sidebar__img-link" href="podcast.html">
-                <img class="sidebar__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/01.jpg" alt="Cover of Why Is That?">
+    <main class="principal columnas">
+        <aside class="caja lateral">
+            <a class="lateralPortada" href="podcast.html">
+                <img class="portada lateralImagen" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/01.jpg" alt="Portada de ¿Y eso por qué?">
             </a>
-            <div class="sidebar__block">
-                <p class="sidebar__title"><a class="sidebar__link" href="podcast.html">Why Is That?</a></p>
-                <p class="sidebar__author"><a class="sidebar__link" href="podcast.html">by Curious Mind</a></p>
+            <div class="lateralBloque">
+                <p class="titulo tituloMediano"><a class="enlace" href="podcast.html">¿Y eso por qué?</a></p>
+                <p class="cursiva"><a class="enlace textoSuave" href="podcast.html">por Mente Curiosa</a></p>
             </div>
-            <div class="sidebar__block">
-                <h2 class="sidebar__label">Description</h2>
-                <p class="sidebar__desc">Everyday questions with surprising answers. Every week we solve a “why?” you never dared to look up.</p>
+            <div class="lateralBloque">
+                <h2 class="etiqueta">Descripción</h2>
+                <p class="textoSuave">Preguntas cotidianas con respuestas sorprendentes. Cada semana resolvemos un «¿por qué?» que nunca te atreviste a buscar.</p>
             </div>
         </aside>
 
-        <article class="episode">
-            <p class="episode__tag">Episode 10</p>
-            <h1 class="episode__title">Why Are Flamingos Pink?</h1>
+        <article class="caja contenido episodio">
+            <p class="etiqueta etiquetaFondo">Episodio 10</p>
+            <h1 class="titulo tituloGrande">¿Por qué los flamencos son rosas?</h1>
 
-            <div class="episode__desc">
-                <p>Flamingos are born grey. Their pink colour comes from what they eat: tiny shrimp and algae rich in <strong>carotenoids</strong>, the same pigments that give carrots their colour.</p>
-                <p>In this episode we travel to the salt marshes of Doñana to see how their diet changes their feathers. Learn more on <a href="https://en.wikipedia.org/wiki/Flamingo">Wikipedia</a> or listen to more episodes of <a href="podcast.html">Why Is That?</a>.</p>
+            <div class="textoSuave parrafos">
+                <p>Los flamencos nacen grises. Su color rosa viene de lo que comen: pequeñas gambas y algas ricas en <strong>carotenoides</strong>, los mismos pigmentos que dan color a las zanahorias.</p>
+                <p>En este episodio viajamos a las marismas de Doñana para ver cómo su dieta cambia el color de sus plumas. Descubre más en <a class="enlaceCian" href="https://es.wikipedia.org/wiki/Phoenicopteridae">Wikipedia</a> o escucha más episodios de <a class="enlaceCian" href="podcast.html">¿Y eso por qué?</a>.</p>
             </div>
 
-            <audio class="episode__audio" controls preload="metadata" aria-label="Episode: Why Are Flamingos Pink?">
+            <audio class="audio" controls preload="metadata" aria-label="Episodio: ¿Por qué los flamencos son rosas?">
                 <source src="https://res.cloudinary.com/TU_CUENTA/video/upload/gabinete/flamingos.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
+                Tu navegador no puede reproducir este audio.
             </audio>
 
-            <details class="transcript">
-                <summary class="transcript__summary">Read transcript</summary>
-                <div class="transcript__body">
-                    <p><strong>Host:</strong> Welcome to Why Is That?, the podcast that answers the questions nobody asks out loud.</p>
-                    <p><strong>Host:</strong> Today we are talking about flamingos. Did you know they are born grey?</p>
-                    <p><strong>Guest:</strong> That’s right. Their pink colour comes entirely from their food.</p>
+            <details class="caja transcripcion">
+                <summary class="transcripcionResumen">Leer transcripción</summary>
+                <div class="textoSuave parrafos transcripcionTexto">
+                    <p><strong>Presentador:</strong> Bienvenidos a ¿Y eso por qué?, el podcast que responde a las preguntas que nadie hace en voz alta.</p>
+                    <p><strong>Presentador:</strong> Hoy hablamos de flamencos. ¿Sabías que nacen grises?</p>
+                    <p><strong>Invitada:</strong> Así es. Su color rosa viene únicamente de lo que comen.</p>
                 </div>
             </details>
         </article>
