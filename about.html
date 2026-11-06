@@ -1,104 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gabinete: podcasts about science, history and curiosities.">
-    <title>Gabinete · About</title>
+    <meta name="description" content="Gabinete: quiénes somos y cómo enviarnos tu curiosidad.">
+    <title>Gabinete · Nosotros</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <a class="header__logo" href="index.html">Gabinete</a>
-        <nav class="nav" aria-label="Main menu">
-            <ul class="nav__list">
-                <li><a class="nav__link" href="index.html">Home</a></li>
-                <li><a class="nav__link" href="categories.html">Categories</a></li>
-                <li><a class="nav__link" href="library.html">Library</a></li>
-                <li><a class="nav__link" href="authors.html">Authors</a></li>
-                <li><a class="nav__link" href="about.html" aria-current="page">About</a></li>
+    <header class="cabecera">
+        <a class="logo" href="index.html">Gabinete</a>
+        <nav class="menu" aria-label="Menú principal">
+            <ul class="menuLista">
+                <li><a class="navEnlace" href="index.html">Inicio</a></li>
+                <li><a class="navEnlace" href="categories.html">Categorías</a></li>
+                <li><a class="navEnlace" href="library.html">Biblioteca</a></li>
+                <li><a class="navEnlace" href="authors.html">Autores</a></li>
+                <li><a class="navEnlace activo" href="about.html" aria-current="page">Nosotros</a></li>
             </ul>
         </nav>
-        <span class="header__loader" aria-hidden="true"></span>
+        <span class="loader" aria-hidden="true"></span>
     </header>
 
-    <main class="main">
-        <div class="page-header">
-            <h1 class="page-header__title">About us</h1>
-            <p class="page-header__intro">A cabinet of curiosities in audio format.</p>
+    <main class="principal">
+        <div class="cabeceraPagina">
+            <h1 class="titulo tituloPagina">Sobre nosotros</h1>
+            <p class="textoSuave">Un gabinete de curiosidades en formato audio.</p>
         </div>
 
-        <div class="about">
-            <section class="about__info" aria-labelledby="mission-title">
-                <h2 class="about__title" id="mission-title">Our mission</h2>
-                <p class="about__text">Gabinete brings together podcasts for curious minds: science, history, nature and all those strange questions that pop into your head in the shower. Every show is made by people who love sharing what they know.</p>
+        <div class="nosotros">
+            <section class="contenido seccion" aria-labelledby="tituloMision">
+                <h2 class="titulo tituloMediano resaltado" id="tituloMision">Nuestra misión</h2>
+                <p class="textoSuave anchoLectura">Gabinete reúne podcasts para mentes curiosas: ciencia, historia, naturaleza y todas esas preguntas raras que se te ocurren en la ducha. Cada programa lo hacen personas a las que les encanta compartir lo que saben.</p>
 
-                <ul class="values">
-                    <li class="value">
-                        <span class="value__number" aria-hidden="true">1</span>
+                <ul class="valores">
+                    <li class="caja valor">
+                        <span class="numero" aria-hidden="true">1</span>
                         <div>
-                            <h3 class="value__title">Curiosity</h3>
-                            <p class="value__text">Small questions, huge answers.</p>
+                            <h3 class="titulo tituloPequeno">Curiosidad</h3>
+                            <p class="textoSuave">Preguntas pequeñas, respuestas enormes.</p>
                         </div>
                     </li>
-                    <li class="value">
-                        <span class="value__number" aria-hidden="true">2</span>
+                    <li class="caja valor">
+                        <span class="numero" aria-hidden="true">2</span>
                         <div>
-                            <h3 class="value__title">Accuracy</h3>
-                            <p class="value__text">Checked facts and linked sources.</p>
+                            <h3 class="titulo tituloPequeno">Rigor</h3>
+                            <p class="textoSuave">Datos comprobados y fuentes enlazadas.</p>
                         </div>
                     </li>
-                    <li class="value">
-                        <span class="value__number" aria-hidden="true">3</span>
+                    <li class="caja valor">
+                        <span class="numero" aria-hidden="true">3</span>
                         <div>
-                            <h3 class="value__title">Fun</h3>
-                            <p class="value__text">Learning that never feels like a lesson.</p>
+                            <h3 class="titulo tituloPequeno">Diversión</h3>
+                            <p class="textoSuave">Aprender sin que parezca una clase.</p>
                         </div>
                     </li>
                 </ul>
             </section>
 
-            <section class="contact" aria-labelledby="contact-title">
-                <h2 class="about__title" id="contact-title">Send us your curiosity</h2>
-                <form class="contact__form" action="#">
-                    <label class="contact__label" for="name">Name</label>
-                    <input class="contact__input" type="text" id="name" name="name" placeholder="Your name" autocomplete="name">
+            <section class="caja contacto" aria-labelledby="tituloContacto">
+                <h2 class="titulo tituloMediano resaltado" id="tituloContacto">Envíanos tu curiosidad</h2>
+                <form class="formulario" action="#">
+                    <label class="etiquetaCampo textoSuave negrita" for="nombre">Nombre</label>
+                    <input class="campo" type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name">
 
-                    <label class="contact__label" for="email">Email</label>
-                    <input class="contact__input" type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email">
+                    <label class="etiquetaCampo textoSuave negrita" for="correo">Correo electrónico</label>
+                    <input class="campo" type="email" id="correo" name="correo" placeholder="tu@correo.com" autocomplete="email">
 
-                    <label class="contact__label" for="message">Your question</label>
-                    <textarea class="contact__input contact__textarea" id="message" name="message" rows="5" placeholder="Why do cats always land on their feet?"></textarea>
+                    <label class="etiquetaCampo textoSuave negrita" for="mensaje">Tu pregunta</label>
+                    <textarea class="campo" id="mensaje" name="mensaje" rows="5" placeholder="¿Por qué los gatos siempre caen de pie?"></textarea>
 
-                    <button class="contact__btn" type="submit">Send</button>
+                    <button class="boton" type="submit">Enviar</button>
                 </form>
             </section>
         </div>
     </main>
 
-    <footer class="footer">
-        <div class="footer__inner">
-            <a class="footer__logo" href="index.html">Gabinete</a>
+    <footer class="pie">
+        <div class="pieSuperior">
+            <a class="logo logoPie" href="index.html">Gabinete</a>
 
-            <nav class="footer__nav" aria-label="Footer menu">
-                <ul class="footer__list">
-                    <li><a class="footer__link" href="index.html">Home</a></li>
-                    <li><a class="footer__link" href="categories.html">Categories</a></li>
-                    <li><a class="footer__link" href="library.html">Library</a></li>
-                    <li><a class="footer__link" href="authors.html">Authors</a></li>
-                    <li><a class="footer__link" href="about.html">About</a></li>
+            <nav aria-label="Menú del pie">
+                <ul class="pieLista">
+                    <li><a class="enlace textoSuave" href="index.html">Inicio</a></li>
+                    <li><a class="enlace textoSuave" href="categories.html">Categorías</a></li>
+                    <li><a class="enlace textoSuave" href="library.html">Biblioteca</a></li>
+                    <li><a class="enlace textoSuave" href="authors.html">Autores</a></li>
+                    <li><a class="enlace textoSuave" href="about.html">Nosotros</a></li>
                 </ul>
             </nav>
 
-            <a class="footer__link" href="https://github.com/ruizdelavegaalba-png/Gabinete">GitHub</a>
+            <a class="enlace textoSuave" href="https://github.com/ruizdelavegaalba-png/Gabinete">GitHub</a>
         </div>
 
-        <div class="footer__bottom">
-            <p class="footer__credits">Audio: royalty-free music from Pixabay (Pixabay Content License). Images and audio hosted on Cloudinary.</p>
-            <p class="footer__copy">© 2026 Gabinete · DIW project · CEI</p>
+        <div class="pieInferior textoSuave textoPequeno">
+            <p>Audio: música libre de derechos de Pixabay (Licencia de contenido de Pixabay). Imágenes y audio alojados en Cloudinary.</p>
+            <p>© 2026 Gabinete · Proyecto de DIW · CEI</p>
         </div>
     </footer>
 </body>
