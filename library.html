@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gabinete: podcasts about science, history and curiosities.">
+    <title>Gabinete · Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <a class="header__logo" href="index.html">Gabinete</a>
+        <nav class="nav" aria-label="Main menu">
+            <ul class="nav__list">
+                <li><a class="nav__link" href="index.html">Home</a></li>
+                <li><a class="nav__link" href="categories.html">Categories</a></li>
+                <li><a class="nav__link" href="library.html" aria-current="page">Library</a></li>
+                <li><a class="nav__link" href="authors.html">Authors</a></li>
+                <li><a class="nav__link" href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <span class="header__loader" aria-hidden="true"></span>
+    </header>
+
+    <main class="main">
+        <div class="page-header">
+            <h1 class="page-header__title">My library</h1>
+            <p class="page-header__intro">Pick up where you left off and keep your favourite podcasts close.</p>
+        </div>
+
+        <section class="library-section" aria-labelledby="continue-title">
+            <h2 class="library-section__title" id="continue-title">Continue listening</h2>
+            <ul class="resume-list">
+                <li class="resume">
+                    <a class="resume__link" href="episode.html">
+                        <img class="resume__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/01.jpg" alt="Cover of Why Is That?">
+                        <div class="resume__info">
+                            <h3 class="resume__title">Why Is the Sky Blue?</h3>
+                            <p class="resume__podcast">Why Is That?</p>
+                            <progress class="resume__progress" value="65" max="100" aria-label="65% listened">65%</progress>
+                            <p class="resume__left">8 min left</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="resume">
+                    <a class="resume__link" href="episode.html">
+                        <img class="resume__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/02.jpg" alt="Cover of Myths Under the Microscope">
+                        <div class="resume__info">
+                            <h3 class="resume__title">The 10% Brain Myth</h3>
+                            <p class="resume__podcast">Myths Under the Microscope</p>
+                            <progress class="resume__progress" value="30" max="100" aria-label="30% listened">30%</progress>
+                            <p class="resume__left">17 min left</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="resume">
+                    <a class="resume__link" href="episode.html">
+                        <img class="resume__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/07.jpg" alt="Cover of Map Mysteries">
+                        <div class="resume__info">
+                            <h3 class="resume__title">The Island That Never Existed</h3>
+                            <p class="resume__podcast">Map Mysteries</p>
+                            <progress class="resume__progress" value="85" max="100" aria-label="85% listened">85%</progress>
+                            <p class="resume__left">3 min left</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="library-section" aria-labelledby="favourites-title">
+            <h2 class="library-section__title" id="favourites-title">Favourites</h2>
+            <div class="grid">
+                <article class="card">
+                    <a class="card__link" href="podcast.html">
+                        <img class="card__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/04.jpg" alt="Cover of The Platypus Corner">
+                        <div class="card__text">
+                            <h3 class="card__title">The Platypus Corner</h3>
+                            <p class="card__author">Author: Rare Fauna</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <a class="card__link" href="podcast.html">
+                        <img class="card__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/08.jpg" alt="Cover of Kitchen Science">
+                        <div class="card__text">
+                            <h3 class="card__title">Kitchen Science</h3>
+                            <p class="card__author">Author: Chemistry in the Pot</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <a class="card__link" href="podcast.html">
+                        <img class="card__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/10.jpg" alt="Cover of Bugs Are Cool">
+                        <div class="card__text">
+                            <h3 class="card__title">Bugs Are Cool</h3>
+                            <p class="card__author">Author: Pop Entomology</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <a class="card__link" href="podcast.html">
+                        <img class="card__img" src="https://res.cloudinary.com/TU_CUENTA/image/upload/gabinete/12.jpg" alt="Cover of Pocket Sky">
+                        <div class="card__text">
+                            <h3 class="card__title">Pocket Sky</h3>
+                            <p class="card__author">Author: Slow Orbit</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <a class="footer__logo" href="index.html">Gabinete</a>
+
+            <nav class="footer__nav" aria-label="Footer menu">
+                <ul class="footer__list">
+                    <li><a class="footer__link" href="index.html">Home</a></li>
+                    <li><a class="footer__link" href="categories.html">Categories</a></li>
+                    <li><a class="footer__link" href="library.html">Library</a></li>
+                    <li><a class="footer__link" href="authors.html">Authors</a></li>
+                    <li><a class="footer__link" href="about.html">About</a></li>
+                </ul>
+            </nav>
+
+            <a class="footer__link" href="https://github.com/ruizdelavegaalba-png/Gabinete">GitHub</a>
+        </div>
+
+        <div class="footer__bottom">
+            <p class="footer__credits">Audio: royalty-free music from Pixabay (Pixabay Content License). Images and audio hosted on Cloudinary.</p>
+            <p class="footer__copy">© 2026 Gabinete · DIW project · CEI</p>
+        </div>
+    </footer>
+</body>
+</html>
