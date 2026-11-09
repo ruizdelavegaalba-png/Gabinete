@@ -165,7 +165,8 @@ ol {
     }
 }
 
-.inicio {
+.inicio,
+.detalle {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2.5rem 2rem 4rem;
@@ -239,11 +240,16 @@ ol {
     margin-top: 5rem;
 }
 
-.tarjeta {
-    height: 100%;
+.tarjeta,
+.lateral,
+.episodiosContador {
     border: 1px solid var(--colorBordeCristal);
     border-radius: 16px;
     background-color: var(--colorCristal);
+}
+
+.tarjeta {
+    height: 100%;
     text-align: center;
     transition: transform var(--transicionBase), border-color var(--transicionBase), box-shadow var(--transicionBase);
 }
@@ -289,4 +295,106 @@ ol {
 .tarjetaAutor {
     color: var(--colorTextoSuave);
     font-size: 0.95rem;
+}
+
+.podcast,
+.podcastPorDefecto {
+    display: none;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.podcast:target,
+.podcastPorDefecto:target,
+.listaPodcasts:not(:has(:target)) .podcastPorDefecto {
+    display: flex;
+}
+
+.lateral {
+    flex: 0 0 300px;
+    padding: 1.5rem;
+}
+
+.lateralImagen {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.lateralTitulo,
+.lateralAutor {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--colorBordeCristal);
+}
+
+.lateralTitulo {
+    font-size: 1.9rem;
+}
+
+.lateralAutor {
+    color: var(--colorCian);
+    font-weight: 500;
+}
+
+.lateralDescripcion {
+    color: var(--colorTextoSuave);
+}
+
+.episodios {
+    flex: 1;
+    min-width: 0;
+}
+
+.episodiosContador {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    padding: 0.6rem 1.4rem;
+    font-size: 1.5rem;
+}
+
+.episodiosTabla {
+    width: 100%;
+    border: 1px solid var(--colorBordeCristal);
+    border-collapse: collapse;
+    background-color: var(--colorCristal);
+}
+
+.episodiosTabla th,
+.episodiosTabla td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--colorBordeCristal);
+    text-align: left;
+}
+
+.episodiosTabla th {
+    background-color: var(--colorFondoOscuro);
+    color: var(--colorCian);
+    font-family: var(--fuenteTitulos);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.episodiosTabla td {
+    color: var(--colorTextoSuave);
+}
+
+.episodiosEnlace {
+    color: var(--colorTexto);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color var(--transicionBase);
+}
+
+.episodiosEnlace:hover {
+    color: var(--colorCian);
+    text-decoration: underline;
+}
+
+.episodiosEnlace:active {
+    color: var(--colorVioleta);
 }
