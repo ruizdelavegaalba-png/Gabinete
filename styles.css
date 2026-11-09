@@ -49,7 +49,8 @@ a {
     color: inherit;
 }
 
-a:focus-visible {
+a:focus-visible,
+.transcripcionResumen:focus-visible {
     outline: 2px solid var(--colorCian);
     outline-offset: 3px;
 }
@@ -192,7 +193,9 @@ ol {
     gap: 1rem;
 }
 
-.podcastsInsignia {
+.podcastsInsignia,
+.episodioEtiqueta {
+    width: fit-content;
     padding: 0.35rem 1rem;
     border-radius: 999px;
     background: var(--degradadoPrincipal);
@@ -211,10 +214,6 @@ ol {
     font-family: inherit;
     font-size: 1rem;
     transition: border-color var(--transicionBase), box-shadow var(--transicionBase);
-}
-
-.buscadorCampo::placeholder {
-    color: var(--colorTextoSuave);
 }
 
 .buscadorCampo:hover {
@@ -242,7 +241,8 @@ ol {
 
 .tarjeta,
 .lateral,
-.episodiosContador {
+.episodiosContador,
+.episodioContenido {
     border: 1px solid var(--colorBordeCristal);
     border-radius: 16px;
     background-color: var(--colorCristal);
@@ -293,12 +293,22 @@ ol {
 }
 
 .tarjetaAutor {
-    color: var(--colorTextoSuave);
     font-size: 0.95rem;
 }
 
+.buscadorCampo::placeholder,
+.tarjetaAutor,
+.lateralDescripcion,
+.episodiosTabla td,
+.episodioDatos,
+.transcripcionTexto {
+    color: var(--colorTextoSuave);
+}
+
 .podcast,
-.podcastPorDefecto {
+.podcastPorDefecto,
+.episodio,
+.episodioPorDefecto {
     display: none;
     align-items: flex-start;
     gap: 2rem;
@@ -306,7 +316,10 @@ ol {
 
 .podcast:target,
 .podcastPorDefecto:target,
-.listaPodcasts:not(:has(:target)) .podcastPorDefecto {
+.listaPodcasts:not(:has(:target)) .podcastPorDefecto,
+.episodio:target,
+.episodioPorDefecto:target,
+.listaEpisodios:not(:has(:target)) .episodioPorDefecto {
     display: flex;
 }
 
@@ -340,8 +353,18 @@ ol {
     font-weight: 500;
 }
 
-.lateralDescripcion {
-    color: var(--colorTextoSuave);
+.lateralEnlaceImagen {
+    display: block;
+    border-radius: 12px;
+    transition: opacity var(--transicionBase), transform var(--transicionBase);
+}
+
+.lateralEnlaceImagen:hover {
+    opacity: 0.85;
+}
+
+.lateralEnlaceImagen:active {
+    transform: scale(0.98);
 }
 
 .episodios {
@@ -379,22 +402,85 @@ ol {
     text-transform: uppercase;
 }
 
-.episodiosTabla td {
-    color: var(--colorTextoSuave);
+.episodiosEnlace,
+.lateralEnlace,
+.episodioEnlace {
+    text-decoration: none;
+    transition: color var(--transicionBase);
 }
 
 .episodiosEnlace {
     color: var(--colorTexto);
     font-weight: 500;
-    text-decoration: none;
-    transition: color var(--transicionBase);
 }
 
-.episodiosEnlace:hover {
+.episodioEnlace {
+    color: var(--colorCian);
+    font-weight: 600;
+}
+
+.episodiosEnlace:hover,
+.lateralEnlace:hover,
+.episodioEnlace:hover {
     color: var(--colorCian);
     text-decoration: underline;
 }
 
-.episodiosEnlace:active {
+.episodiosEnlace:active,
+.lateralEnlace:active,
+.episodioEnlace:active {
     color: var(--colorVioleta);
+}
+
+.episodioContenido {
+    flex: 1;
+    min-width: 0;
+    padding: 2rem;
+}
+
+.episodioTitulo {
+    margin: 1rem 0 0.5rem;
+    font-size: 2.4rem;
+}
+
+.episodioDatos {
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.episodioTexto {
+    margin-bottom: 1rem;
+}
+
+.episodioAudio {
+    display: block;
+    width: 100%;
+    margin: 1.5rem 0;
+    border: 1px solid var(--colorCian);
+    border-radius: 999px;
+    box-shadow: 0 0 14px var(--colorBordeCristal);
+}
+
+.transcripcion {
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--colorBordeCristal);
+    border-radius: 12px;
+    background-color: var(--colorFondoOscuro);
+}
+
+.transcripcionResumen {
+    color: var(--colorCian);
+    font-family: var(--fuenteTitulos);
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color var(--transicionBase);
+}
+
+.transcripcionResumen:hover {
+    color: var(--colorTexto);
+}
+
+.transcripcionTexto {
+    margin-top: 0.75rem;
 }
