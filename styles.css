@@ -59,7 +59,7 @@ ol {
     list-style: none;
 }
 
-.tituloOculto {
+.textoOculto {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -163,4 +163,130 @@ ol {
         transform: rotate(720deg);
         opacity: 0;
     }
+}
+
+.inicio {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 4rem;
+}
+
+.inicioTitulo {
+    margin-bottom: 2rem;
+    font-size: 2.75rem;
+    text-align: center;
+}
+
+.podcastsTitulo {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: var(--colorCian);
+}
+
+.podcastsBarra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.podcastsInsignia {
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    background: var(--degradadoPrincipal);
+    color: var(--colorFondo);
+    font-weight: 600;
+}
+
+.buscadorCampo {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.6rem 1.1rem;
+    border: 1px solid var(--colorBordeCristal);
+    border-radius: 999px;
+    background-color: var(--colorCristal);
+    color: var(--colorTexto);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color var(--transicionBase), box-shadow var(--transicionBase);
+}
+
+.buscadorCampo::placeholder {
+    color: var(--colorTextoSuave);
+}
+
+.buscadorCampo:hover {
+    border-color: var(--colorCian);
+}
+
+.buscadorCampo:focus,
+.buscadorCampo:focus-visible {
+    outline: none;
+    border-color: var(--colorVioleta);
+    box-shadow: 0 0 0 3px var(--colorBrilloVioleta), 0 0 14px var(--colorVioleta);
+}
+
+.buscadorCampo:active {
+    border-color: var(--colorAzul);
+}
+
+.podcastsCuadricula {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1.5rem;
+    row-gap: 5rem;
+    margin-top: 5rem;
+}
+
+.tarjeta {
+    height: 100%;
+    border: 1px solid var(--colorBordeCristal);
+    border-radius: 16px;
+    background-color: var(--colorCristal);
+    text-align: center;
+    transition: transform var(--transicionBase), border-color var(--transicionBase), box-shadow var(--transicionBase);
+}
+
+.tarjeta:hover,
+.tarjeta:focus-within {
+    transform: translateY(-6px);
+    border-color: var(--colorCian);
+    box-shadow: 0 0 18px var(--colorBordeCristal);
+}
+
+.tarjeta:active {
+    transform: translateY(-2px) scale(0.98);
+}
+
+.tarjetaEnlace {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 0 1.25rem 1.5rem;
+    border-radius: 16px;
+    text-decoration: none;
+}
+
+.tarjetaImagen {
+    width: 120px;
+    height: 120px;
+    margin-top: -60px;
+    border: 3px solid var(--colorCian);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 16px var(--colorBordeCristal);
+}
+
+.tarjetaTitulo {
+    margin: 1rem 0 0.4rem;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.tarjetaAutor {
+    color: var(--colorTextoSuave);
+    font-size: 0.95rem;
 }
