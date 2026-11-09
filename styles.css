@@ -6,7 +6,11 @@
     --colorAzul: #2F80ED;
     --colorTexto: #F2F4F8;
     --colorTextoSuave: #A9B4C7;
+    --colorCristal: rgba(23, 19, 40, 0.6);
+    --colorBordeCristal: rgba(79, 209, 232, 0.25);
+    --colorBrilloVioleta: rgba(168, 107, 255, 0.18);
     --degradadoPrincipal: linear-gradient(90deg, var(--colorCian), var(--colorVioleta));
+    --transicionBase: 0.3s ease;
     --fuenteTitulos: "Barlow Condensed", sans-serif;
     --fuenteTexto: "Barlow", sans-serif;
 }
@@ -45,6 +49,11 @@ a {
     color: inherit;
 }
 
+a:focus-visible {
+    outline: 2px solid var(--colorCian);
+    outline-offset: 3px;
+}
+
 ul,
 ol {
     list-style: none;
@@ -57,4 +66,101 @@ ol {
     overflow: hidden;
     clip-path: inset(50%);
     white-space: nowrap;
+}
+
+.cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+    background-color: var(--colorCristal);
+    border-bottom: 1px solid var(--colorBordeCristal);
+}
+
+.cabeceraLogo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform var(--transicionBase);
+}
+
+.cabeceraIcono {
+    filter: drop-shadow(0 0 6px var(--colorCian));
+}
+
+.cabeceraNombre {
+    font-family: var(--fuenteTitulos);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: var(--degradadoPrincipal);
+    background-clip: text;
+    color: transparent;
+}
+
+.menuLista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.menuEnlace,
+.menuEnlaceActivo {
+    display: block;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color var(--transicionBase), color var(--transicionBase), transform var(--transicionBase);
+}
+
+.menuEnlace {
+    color: var(--colorTextoSuave);
+}
+
+.menuEnlaceActivo {
+    color: var(--colorTexto);
+    border-color: var(--colorCian);
+    box-shadow: 0 0 10px var(--colorBordeCristal);
+}
+
+.menuEnlace:hover,
+.menuEnlaceActivo:hover {
+    color: var(--colorTexto);
+    background-color: var(--colorBrilloVioleta);
+}
+
+.cabeceraLogo:active,
+.menuEnlace:active,
+.menuEnlaceActivo:active {
+    transform: scale(0.95);
+}
+
+.cargador {
+    width: 28px;
+    height: 28px;
+    border: 3px solid var(--colorBordeCristal);
+    border-top-color: var(--colorCian);
+    border-radius: 50%;
+    animation: cargaDesvanecida 1s ease-in forwards;
+}
+
+@keyframes cargaDesvanecida {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(720deg);
+        opacity: 0;
+    }
 }
