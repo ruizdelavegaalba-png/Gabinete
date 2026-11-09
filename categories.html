@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Categorías de Gabinete: ciencia, historia, naturaleza, lenguaje, cuerpo humano y espacio, con sus podcasts.">
+    <meta name="author" content="Alba Ruiz de la Vega">
+    <title>Gabinete · Categorías</title>
+    <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/CLOUD_NAME/image/upload/gabinete/icono.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="cabecera">
+        <a class="cabeceraLogo" href="index.html">
+            <img class="cabeceraIcono" src="https://res.cloudinary.com/CLOUD_NAME/image/upload/gabinete/icono.svg" alt="" width="40" height="40">
+            <span class="cabeceraNombre">Gabinete</span>
+        </a>
+        <nav aria-label="Menú principal">
+            <ul class="menuLista">
+                <li><a class="menuEnlace" href="index.html">Inicio</a></li>
+                <li><a class="menuEnlaceActivo" href="categories.html" aria-current="page">Categorías</a></li>
+                <li><a class="menuEnlace" href="library.html">Biblioteca</a></li>
+                <li><a class="menuEnlace" href="authors.html">Autores</a></li>
+                <li><a class="menuEnlace" href="about.html">Nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="cargador" aria-hidden="true"></div>
+    </header>
+    <main class="pagina">
+        <h1 class="paginaTitulo">Categorías</h1>
+        <p class="paginaIntro">Nuestros 12 podcasts ordenados por temas. Elige una categoría y encuentra tu próxima curiosidad.</p>
+        <div class="categoriaCuadricula">
+            <article class="categoriaCiencia" id="ciencia">
+                <h2 class="categoriaTitulo">Ciencia</h2>
+                <p class="categoriaContador">3 podcasts</p>
+                <p class="categoriaDescripcion">Preguntas cotidianas, mitos desmontados y la química que hay en la cocina. La ciencia explicada para cualquier persona curiosa.</p>
+                <ul class="categoriaLista">
+                    <li><a class="categoriaEnlace" href="podcast.html#yEsoPorQue">¿Y eso por qué?</a></li>
+                    <li><a class="categoriaEnlace" href="podcast.html#mitosAlMicroscopio">Mitos al microscopio</a></li>
+                    <li><a class="categoriaEnlace" href="podcast.html#cocinaConCiencia">Cocina con ciencia</a></li>
+                </ul>
+            </article>
+            <article class="categoriaHistoria" id="historia">
+                <h2 class="categoriaTitulo">Historia</h2>
+                <p class="categoriaContador">3 podcasts</p>
+                <p class="categoriaDescripcion">Objetos de todos los días, inventos que fracasaron y noticias que cambiaron el mundo hace más de cien años.</p>
+                <ul class="categoriaLista">
+                    <li><a class="categoriaEnlace" href="podcast.html#objetosConHistoria">Objetos con historia</a></li>
+                    <li><a class="categoriaEnlace" href="podcast.html#inventosFallidos">Inventos fallidos</a></li>
+                    <li><a class="categoriaEnlace" href="podcast.html#noticiasSigloXix">Noticias del siglo XIX</a></li>
+                </ul>
+            </article>
+            <article class="categoriaNaturaleza" id="naturaleza">
+                <h2 class="categoriaTitulo">Naturaleza</h2>
+                <p class="categoriaContador">3 podcasts</p>
+                <p class="categoriaDescripcion">Animales extraños, insectos sorprendentes y lugares del planeta que parecen sacados de otro mundo.</p>
+                <ul class="categoriaLista">
+                    <li><a class="categoriaEnlace" href="podcast.html#rinconOrnitorrinco">El rincón del ornitorrinco</a></li>
+                    <li><a class="categoriaEnlace" href="podcast.html#bichosQueMolan">Bichos que molan</a></li>
+                    <li><a class="categoriaEnlace" href="podcast.html#misteriosDelMapa">Misterios del mapa</a></li>
+                </ul>
+            </article>
+            <article class="categoriaLenguaje" id="lenguaje">
+                <h2 class="categoriaTitulo">Lenguaje</h2>
+                <p class="categoriaContador">1 podcast</p>
+                <p class="categoriaDescripcion">El origen de las palabras que usamos cada día y los viajes que hicieron hasta llegar al español.</p>
+                <ul class="categoriaLista">
+                    <li><a class="categoriaEnlace" href="podcast.html#palabrasViajeras">Palabras viajeras</a></li>
+                </ul>
+            </article>
+            <article class="categoriaCuerpo" id="cuerpoHumano">
+                <h2 class="categoriaTitulo">Cuerpo humano</h2>
+                <p class="categoriaContador">1 podcast</p>
+                <p class="categoriaDescripcion">Huesos, órganos y reacciones curiosas: el manual de instrucciones del cuerpo que nadie nos dio al nacer.</p>
+                <ul class="categoriaLista">
+                    <li><a class="categoriaEnlace" href="podcast.html#cuerpoHumano">Cuerpo humano, manual de uso</a></li>
+                </ul>
+            </article>
+            <article class="categoriaEspacio" id="espacio">
+                <h2 class="categoriaTitulo">Espacio</h2>
+                <p class="categoriaContador">1 podcast</p>
+                <p class="categoriaDescripcion">Planetas, estrellas y galaxias contados sin prisas y sin necesidad de telescopio.</p>
+                <ul class="categoriaLista">
+                    <li><a class="categoriaEnlace" href="podcast.html#cieloDeBolsillo">Cielo de bolsillo</a></li>
+                </ul>
+            </article>
+        </div>
+    </main>
+    <footer class="pie">
+        <p>© 2026 Alba Ruiz de la Vega</p>
+    </footer>
+</body>
+</html>
