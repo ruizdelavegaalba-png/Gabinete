@@ -1,0 +1,60 @@
+:root {
+    --colorFondo: #0E141C;
+    --colorFondoOscuro: #171328;
+    --colorCian: #4FD1E8;
+    --colorVioleta: #A86BFF;
+    --colorAzul: #2F80ED;
+    --colorTexto: #F2F4F8;
+    --colorTextoSuave: #A9B4C7;
+    --degradadoPrincipal: linear-gradient(90deg, var(--colorCian), var(--colorVioleta));
+    --fuenteTitulos: "Barlow Condensed", sans-serif;
+    --fuenteTexto: "Barlow", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--colorFondo);
+    color: var(--colorTexto);
+    font-family: var(--fuenteTexto);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fuenteTitulos);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.tituloOculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
