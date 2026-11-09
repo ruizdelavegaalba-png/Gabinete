@@ -6,6 +6,9 @@
     --colorAzul: #2F80ED;
     --colorTexto: #F2F4F8;
     --colorTextoSuave: #A9B4C7;
+    --colorAmbar: #F2B84B;
+    --colorVerde: #5FD38D;
+    --colorRosa: #FF7A9A;
     --colorCristal: rgba(23, 19, 40, 0.6);
     --colorBordeCristal: rgba(79, 209, 232, 0.25);
     --colorBrilloVioleta: rgba(168, 107, 255, 0.18);
@@ -169,6 +172,7 @@ ol {
 }
 
 .inicio,
+.pagina,
 .detalle {
     width: 100%;
     max-width: 1200px;
@@ -176,7 +180,8 @@ ol {
     padding: 2.5rem 2rem 4rem;
 }
 
-.inicioTitulo {
+.inicioTitulo,
+.paginaTitulo {
     margin-bottom: 2rem;
     font-size: 2.75rem;
     text-align: center;
@@ -388,6 +393,8 @@ ol {
 .tarjetaAutor,
 .destacadoDescripcion,
 .lateralDescripcion,
+.paginaIntro,
+.categoriaDescripcion,
 .episodiosTabla td,
 .episodioDatos,
 .transcripcionTexto,
@@ -493,13 +500,15 @@ ol {
 }
 
 .episodiosEnlace,
+.categoriaEnlace,
 .lateralEnlace,
 .episodioEnlace {
     text-decoration: none;
     transition: color var(--transicionBase);
 }
 
-.episodiosEnlace {
+.episodiosEnlace,
+.categoriaEnlace {
     color: var(--colorTexto);
     font-weight: 500;
 }
@@ -510,6 +519,7 @@ ol {
 }
 
 .episodiosEnlace:hover,
+.categoriaEnlace:hover,
 .lateralEnlace:hover,
 .episodioEnlace:hover {
     color: var(--colorCian);
@@ -517,6 +527,7 @@ ol {
 }
 
 .episodiosEnlace:active,
+.categoriaEnlace:active,
 .lateralEnlace:active,
 .episodioEnlace:active {
     color: var(--colorVioleta);
@@ -582,4 +593,97 @@ ol {
     background-color: var(--colorCristal);
     font-size: 0.9rem;
     text-align: center;
+}
+
+.paginaIntro {
+    max-width: 640px;
+    margin: -1rem auto 2.5rem;
+    text-align: center;
+}
+
+.categoriaCuadricula {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.categoriaCiencia,
+.categoriaHistoria,
+.categoriaNaturaleza,
+.categoriaLenguaje,
+.categoriaCuerpo,
+.categoriaEspacio {
+    padding: 1.5rem;
+    border: 1px solid;
+    border-top-width: 4px;
+    border-radius: 16px;
+    background-color: var(--colorCristal);
+    transition: transform var(--transicionBase), box-shadow var(--transicionBase);
+}
+
+.categoriaCiencia {
+    border-color: var(--colorCian);
+}
+
+.categoriaHistoria {
+    border-color: var(--colorAmbar);
+}
+
+.categoriaNaturaleza {
+    border-color: var(--colorVerde);
+}
+
+.categoriaLenguaje {
+    border-color: var(--colorVioleta);
+}
+
+.categoriaCuerpo {
+    border-color: var(--colorRosa);
+}
+
+.categoriaEspacio {
+    border-color: var(--colorAzul);
+}
+
+.categoriaCiencia:hover,
+.categoriaHistoria:hover,
+.categoriaNaturaleza:hover,
+.categoriaLenguaje:hover,
+.categoriaCuerpo:hover,
+.categoriaEspacio:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 18px var(--colorBordeCristal);
+}
+
+.categoriaCiencia:target,
+.categoriaHistoria:target,
+.categoriaNaturaleza:target,
+.categoriaLenguaje:target,
+.categoriaCuerpo:target,
+.categoriaEspacio:target {
+    box-shadow: 0 0 24px var(--colorVioleta);
+}
+
+.categoriaTitulo {
+    font-size: 1.75rem;
+}
+
+.categoriaContador {
+    margin: 0.25rem 0 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.categoriaDescripcion {
+    margin-bottom: 1rem;
+}
+
+.categoriaLista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--colorBordeCristal);
 }
