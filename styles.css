@@ -24,6 +24,8 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     background-color: var(--colorFondo);
     color: var(--colorTexto);
@@ -168,6 +170,7 @@ ol {
 
 .inicio,
 .detalle {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 2.5rem 2rem 4rem;
@@ -301,7 +304,8 @@ ol {
 .lateralDescripcion,
 .episodiosTabla td,
 .episodioDatos,
-.transcripcionTexto {
+.transcripcionTexto,
+.pie {
     color: var(--colorTextoSuave);
 }
 
@@ -483,4 +487,13 @@ ol {
 
 .transcripcionTexto {
     margin-top: 0.75rem;
+}
+
+.pie {
+    margin-top: auto;
+    padding: 1.5rem 2rem;
+    border-top: 1px solid var(--colorBordeCristal);
+    background-color: var(--colorCristal);
+    font-size: 0.9rem;
+    text-align: center;
 }
