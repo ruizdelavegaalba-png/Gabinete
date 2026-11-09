@@ -182,10 +182,47 @@ ol {
     text-align: center;
 }
 
-.podcastsTitulo {
+.destacadoTitulo,
+.podcastsTitulo,
+.categoriasTitulo {
     margin-bottom: 1rem;
     font-size: 1.75rem;
     color: var(--colorCian);
+}
+
+.destacadoTarjeta {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding: 1.5rem;
+}
+
+.destacadoImagen {
+    width: 45%;
+    height: auto;
+    border-radius: 12px;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.destacadoTexto {
+    flex: 1;
+}
+
+.destacadoEpisodio {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.destacadoDatos {
+    margin-bottom: 1rem;
+    color: var(--colorCian);
+    font-weight: 500;
+}
+
+.destacadoDescripcion {
+    margin-bottom: 1.5rem;
 }
 
 .podcastsBarra {
@@ -197,13 +234,30 @@ ol {
 }
 
 .podcastsInsignia,
-.episodioEtiqueta {
+.episodioEtiqueta,
+.destacadoBoton {
     width: fit-content;
     padding: 0.35rem 1rem;
     border-radius: 999px;
     background: var(--degradadoPrincipal);
     color: var(--colorFondo);
     font-weight: 600;
+}
+
+.destacadoBoton {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    text-decoration: none;
+    transition: transform var(--transicionBase), box-shadow var(--transicionBase);
+}
+
+.destacadoBoton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px var(--colorVioleta);
+}
+
+.destacadoBoton:active {
+    transform: scale(0.96);
 }
 
 .buscadorCampo {
@@ -245,7 +299,8 @@ ol {
 .tarjeta,
 .lateral,
 .episodiosContador,
-.episodioContenido {
+.episodioContenido,
+.destacadoTarjeta {
     border: 1px solid var(--colorBordeCristal);
     border-radius: 16px;
     background-color: var(--colorCristal);
@@ -299,8 +354,39 @@ ol {
     font-size: 0.95rem;
 }
 
+.categoriasTitulo {
+    margin-top: 4rem;
+}
+
+.categoriasLista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.categoriasEnlace {
+    display: block;
+    padding: 0.6rem 1.4rem;
+    border: 1px solid var(--colorCian);
+    border-radius: 999px;
+    background-color: var(--colorCristal);
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color var(--transicionBase), border-color var(--transicionBase), transform var(--transicionBase);
+}
+
+.categoriasEnlace:hover {
+    border-color: var(--colorVioleta);
+    background-color: var(--colorBrilloVioleta);
+}
+
+.categoriasEnlace:active {
+    transform: scale(0.95);
+}
+
 .buscadorCampo::placeholder,
 .tarjetaAutor,
+.destacadoDescripcion,
 .lateralDescripcion,
 .episodiosTabla td,
 .episodioDatos,
