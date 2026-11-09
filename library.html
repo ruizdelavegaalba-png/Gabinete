@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tu biblioteca en Gabinete: episodios para continuar escuchando y tus podcasts favoritos.">
+    <meta name="author" content="Alba Ruiz de la Vega">
+    <title>Gabinete · Mi biblioteca</title>
+    <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/CLOUD_NAME/image/upload/gabinete/icono.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="cabecera">
+        <a class="cabeceraLogo" href="index.html">
+            <img class="cabeceraIcono" src="https://res.cloudinary.com/CLOUD_NAME/image/upload/gabinete/icono.svg" alt="" width="40" height="40">
+            <span class="cabeceraNombre">Gabinete</span>
+        </a>
+        <nav aria-label="Menú principal">
+            <ul class="menuLista">
+                <li><a class="menuEnlace" href="index.html">Inicio</a></li>
+                <li><a class="menuEnlace" href="categories.html">Categorías</a></li>
+                <li><a class="menuEnlaceActivo" href="library.html" aria-current="page">Biblioteca</a></li>
+                <li><a class="menuEnlace" href="authors.html">Autores</a></li>
+                <li><a class="menuEnlace" href="about.html">Nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="cargador" aria-hidden="true"></div>
+    </header>
+    <main class="pagina">
+        <h1 class="paginaTitulo">Mi biblioteca</h1>
+        <p class="paginaIntro">Retoma los episodios que dejaste a medias y vuelve rápido a tus podcasts favoritos.</p>
+        <section aria-labelledby="continuarTitulo">
+            <h2 class="bibliotecaTitulo" id="continuarTitulo">Continuar escuchando</h2>
+            <ul class="continuarLista">
+                <li>
+                    <article class="continuarTarjeta">
+                        <img class="continuarImagen" src="https://res.cloudinary.com/CLOUD_NAME/image/upload/gabinete/01.jpg" alt="Portada del podcast ¿Y eso por qué?" width="80" height="80">
+                        <div class="continuarTexto">
+                            <p class="continuarPodcast">¿Y eso por qué?</p>
+                            <h3 class="continuarTitulo"><a class="continuarEnlace" href="episode.html#flamencosRosas">¿Por qué los flamencos son rosas?</a></h3>
+                            <progress class="continuarProgreso" value="904" max="1391" aria-label="Progreso de escucha de ¿Por qué los flamencos son rosas?">65 %</progress>
+                            <p class="continuarRestante">Quedan 8:07</p>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="continuarTarjeta">
+                        <img class="continuarImagen" src="https://res.cloudinary.com/CLOUD_NAME/image/upload/gabinete/04.jpg" alt="Portada del podcast El rincón del ornitorrinco" width="80" height="80">
+                        <div class="continuarTexto">
+                            <p class="continuarPodcast">El rincón del ornitorrinco</p>
+                            <h3 class="continuarTitulo"><a class="continuarEnlace" href="episode.html#tardigrado">El tardígrado, el animal casi indestructible</a></h3>
+                            <progress class="continuarProgreso" value="405" max="1351" aria-label="Progreso de escucha de El tardígrado, el animal casi indestructible">30 %</progress>
+                            <p class="continuarRestante">Quedan 15:46</p>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="continuarTarjeta">
+                        <img class="continuarImagen" src="https://res.cloudinary.com/CLOUD_NAME/image/upload/gabinete/11.jpg" alt="Portada del podcast Noticias del siglo XIX" width="80" height="80">
+                        <div class="continuarTexto">
+                            <p class="continuarPodcast">Noticias del siglo XIX</p>
+                            <h3 class="continuarTitulo"><a class="continuarEnlace" href="episode.html#anoSinVerano">1816, el año sin verano</a></h3>
+                            <progress class="continuarProgreso" value="1234" max="1452" aria-label="Progreso de escucha de 1816, el año sin verano">85 %</progress>
+                            <p class="continuarRestante">Quedan 3:38</p>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </section>
+        <section aria-labelledby="favoritosTitulo">
+            <h2 class="bibliotecaTitulo" id="favoritosTitulo">Favoritos</h2>
+            <ul class="podcastsCuadricula">
+                <li>
+                    <article class="tarjeta">
+                        <a class="tarjetaEnlace" href="podcast.html#palabrasViajeras">
+                            <img class="tarjetaImagen" src="https://res.cloudinary.com/CLOUD_NAME/image/upload/gabinete/06.jpg" alt="Portada del podcast Palabras viajeras" width="120" height="120">
+                            <h3 class="tarjetaTitulo">Palabras viajeras</h3>
+                            <p class="tarjetaAutor">Autor: Lengua Suelta</p>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article class="tarjeta">
+                        <a class="tarjetaEnlace" href="podcast.html#cocinaConCiencia">
+                            <img class="tarjetaImagen" src="https://res.cloudinary.com/CLOUD_NAME/image/upload/gabinete/08.jpg" alt="Portada del podcast Cocina con ciencia" width="120" height="120">
+                            <h3 class="tarjetaTitulo">Cocina con ciencia</h3>
+                            <p class="tarjetaAutor">Autor: Química en la Olla</p>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article class="tarjeta">
+                        <a class="tarjetaEnlace" href="podcast.html#bichosQueMolan">
+                            <img class="tarjetaImagen" src="https://res.cloudinary.com/CLOUD_NAME/image/upload/gabinete/10.jpg" alt="Portada del podcast Bichos que molan" width="120" height="120">
+                            <h3 class="tarjetaTitulo">Bichos que molan</h3>
+                            <p class="tarjetaAutor">Autor: Entomología Pop</p>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article class="tarjeta">
+                        <a class="tarjetaEnlace" href="podcast.html#cieloDeBolsillo">
+                            <img class="tarjetaImagen" src="https://res.cloudinary.com/CLOUD_NAME/image/upload/gabinete/12.jpg" alt="Portada del podcast Cielo de bolsillo" width="120" height="120">
+                            <h3 class="tarjetaTitulo">Cielo de bolsillo</h3>
+                            <p class="tarjetaAutor">Autor: Órbita Lenta</p>
+                        </a>
+                    </article>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer class="pie">
+        <p>© 2026 Alba Ruiz de la Vega</p>
+    </footer>
+</body>
+</html>
