@@ -188,6 +188,7 @@ ol {
 }
 
 .destacadoTitulo,
+.bibliotecaTitulo,
 .podcastsTitulo,
 .categoriasTitulo {
     margin-bottom: 1rem;
@@ -302,6 +303,7 @@ ol {
 }
 
 .tarjeta,
+.continuarTarjeta,
 .lateral,
 .episodiosContador,
 .episodioContenido,
@@ -395,6 +397,7 @@ ol {
 .lateralDescripcion,
 .paginaIntro,
 .categoriaDescripcion,
+.continuarRestante,
 .episodiosTabla td,
 .episodioDatos,
 .transcripcionTexto,
@@ -501,6 +504,7 @@ ol {
 
 .episodiosEnlace,
 .categoriaEnlace,
+.continuarEnlace,
 .lateralEnlace,
 .episodioEnlace {
     text-decoration: none;
@@ -508,7 +512,8 @@ ol {
 }
 
 .episodiosEnlace,
-.categoriaEnlace {
+.categoriaEnlace,
+.continuarEnlace {
     color: var(--colorTexto);
     font-weight: 500;
 }
@@ -520,6 +525,7 @@ ol {
 
 .episodiosEnlace:hover,
 .categoriaEnlace:hover,
+.continuarEnlace:hover,
 .lateralEnlace:hover,
 .episodioEnlace:hover {
     color: var(--colorCian);
@@ -528,6 +534,7 @@ ol {
 
 .episodiosEnlace:active,
 .categoriaEnlace:active,
+.continuarEnlace:active,
 .lateralEnlace:active,
 .episodioEnlace:active {
     color: var(--colorVioleta);
@@ -650,7 +657,8 @@ ol {
 .categoriaNaturaleza:hover,
 .categoriaLenguaje:hover,
 .categoriaCuerpo:hover,
-.categoriaEspacio:hover {
+.categoriaEspacio:hover,
+.continuarTarjeta:hover {
     transform: translateY(-4px);
     box-shadow: 0 0 18px var(--colorBordeCristal);
 }
@@ -686,4 +694,55 @@ ol {
     gap: 0.4rem;
     padding-top: 1rem;
     border-top: 1px solid var(--colorBordeCristal);
+}
+
+.continuarLista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.continuarTarjeta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+    padding: 1.25rem;
+    transition: transform var(--transicionBase), box-shadow var(--transicionBase);
+}
+
+.continuarImagen {
+    flex: 0 0 80px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.continuarTexto {
+    flex: 1;
+    min-width: 0;
+}
+
+.continuarPodcast {
+    color: var(--colorCian);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.continuarTitulo {
+    margin: 0.25rem 0 0.75rem;
+    font-size: 1.3rem;
+}
+
+.continuarProgreso {
+    width: 100%;
+    height: 8px;
+    accent-color: var(--colorCian);
+}
+
+.continuarRestante {
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
 }
