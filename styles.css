@@ -55,6 +55,7 @@ a {
 }
 
 a:focus-visible,
+.formularioBoton:focus-visible,
 .transcripcionResumen:focus-visible {
     outline: 2px solid var(--colorCian);
     outline-offset: 3px;
@@ -188,6 +189,7 @@ ol {
 }
 
 .destacadoTitulo,
+.nosotrosTitulo,
 .bibliotecaTitulo,
 .podcastsTitulo,
 .categoriasTitulo {
@@ -241,7 +243,8 @@ ol {
 
 .podcastsInsignia,
 .episodioEtiqueta,
-.destacadoBoton {
+.destacadoBoton,
+.formularioBoton {
     width: fit-content;
     padding: 0.35rem 1rem;
     border-radius: 999px;
@@ -250,27 +253,37 @@ ol {
     font-weight: 600;
 }
 
-.destacadoBoton {
+.destacadoBoton,
+.formularioBoton {
     display: inline-block;
     padding: 0.75rem 1.75rem;
     text-decoration: none;
 }
 
-.destacadoBoton:hover {
+.formularioBoton {
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.destacadoBoton:hover,
+.formularioBoton:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 18px var(--colorVioleta);
 }
 
-.destacadoBoton:active {
+.destacadoBoton:active,
+.formularioBoton:active {
     transform: scale(0.96);
 }
 
-.buscadorCampo {
+.buscadorCampo,
+.formularioEntrada,
+.formularioArea {
     width: 100%;
-    max-width: 320px;
     padding: 0.6rem 1.1rem;
     border: 1px solid var(--colorBordeCristal);
-    border-radius: 999px;
     background-color: var(--colorCristal);
     color: var(--colorTexto);
     font-family: inherit;
@@ -278,18 +291,31 @@ ol {
     transition: border-color var(--transicionBase), box-shadow var(--transicionBase);
 }
 
-.buscadorCampo:hover {
+.buscadorCampo {
+    max-width: 320px;
+    border-radius: 999px;
+}
+
+.buscadorCampo:hover,
+.formularioEntrada:hover,
+.formularioArea:hover {
     border-color: var(--colorCian);
 }
 
 .buscadorCampo:focus,
-.buscadorCampo:focus-visible {
+.buscadorCampo:focus-visible,
+.formularioEntrada:focus,
+.formularioEntrada:focus-visible,
+.formularioArea:focus,
+.formularioArea:focus-visible {
     outline: none;
     border-color: var(--colorVioleta);
     box-shadow: 0 0 0 3px var(--colorBrilloVioleta), 0 0 14px var(--colorVioleta);
 }
 
-.buscadorCampo:active {
+.buscadorCampo:active,
+.formularioEntrada:active,
+.formularioArea:active {
     border-color: var(--colorAzul);
 }
 
@@ -302,6 +328,8 @@ ol {
 }
 
 .tarjeta,
+.valorTarjeta,
+.formulario,
 .continuarTarjeta,
 .autorFicha,
 .lateral,
@@ -314,6 +342,7 @@ ol {
 }
 
 .destacadoBoton,
+.formularioBoton,
 .categoriaCiencia,
 .categoriaHistoria,
 .categoriaNaturaleza,
@@ -321,7 +350,8 @@ ol {
 .categoriaCuerpo,
 .categoriaEspacio,
 .continuarTarjeta,
-.autorFicha {
+.autorFicha,
+.valorTarjeta {
     transition: transform var(--transicionBase), box-shadow var(--transicionBase);
 }
 
@@ -414,6 +444,8 @@ ol {
 .categoriaDescripcion,
 .continuarRestante,
 .autorFrase,
+.misionTexto,
+.valorTexto,
 .episodiosTabla td,
 .episodioDatos,
 .transcripcionTexto,
@@ -674,7 +706,8 @@ ol {
 .categoriaCuerpo:hover,
 .categoriaEspacio:hover,
 .continuarTarjeta:hover,
-.autorFicha:hover {
+.autorFicha:hover,
+.valorTarjeta:hover {
     transform: translateY(-4px);
     box-shadow: 0 0 18px var(--colorBordeCristal);
 }
@@ -803,4 +836,52 @@ ol {
 
 .autorEnlace {
     margin-top: auto;
+}
+
+.nosotrosTitulo {
+    margin-top: 3rem;
+}
+
+.misionTexto {
+    max-width: 760px;
+    margin-bottom: 1rem;
+}
+
+.valoresLista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.valorTarjeta {
+    height: 100%;
+    padding: 1.5rem;
+}
+
+.valorTitulo {
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    max-width: 560px;
+    margin-top: 1.5rem;
+    padding: 2rem;
+}
+
+.formularioEtiqueta {
+    font-weight: 600;
+}
+
+.formularioEntrada,
+.formularioArea {
+    margin-bottom: 1rem;
+    border-radius: 12px;
+}
+
+.formularioArea {
+    resize: vertical;
 }
