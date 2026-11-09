@@ -885,3 +885,90 @@ ol {
 .formularioArea {
     resize: vertical;
 }
+
+@media (max-width: 1024px) {
+    .podcastsCuadricula,
+    .categoriaCuadricula,
+    .continuarLista,
+    .autoresCuadricula,
+    .valoresLista {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lateral {
+        flex-basis: 240px;
+    }
+}
+
+@media (max-width: 700px) {
+    .cabecera {
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .menu {
+        order: 3;
+        width: 100%;
+    }
+
+    .menuLista {
+        justify-content: center;
+    }
+
+    .inicio,
+    .pagina,
+    .detalle {
+        padding: 1.5rem 1rem 3rem;
+    }
+
+    .inicioTitulo,
+    .paginaTitulo {
+        font-size: 2.1rem;
+    }
+
+    .podcastsCuadricula,
+    .categoriaCuadricula,
+    .continuarLista,
+    .autoresCuadricula,
+    .valoresLista {
+        grid-template-columns: 1fr;
+    }
+
+    .destacadoTarjeta,
+    .podcast,
+    .podcastPorDefecto,
+    .episodio,
+    .episodioPorDefecto {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .destacadoImagen {
+        width: 100%;
+    }
+
+    .lateral {
+        flex: none;
+    }
+
+    .lateralImagen {
+        max-width: 220px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .episodioContenido,
+    .formulario {
+        padding: 1.25rem;
+    }
+
+    .episodioTitulo {
+        font-size: 1.9rem;
+    }
+
+    .episodiosTabla th,
+    .episodiosTabla td {
+        padding: 0.6rem 0.5rem;
+        font-size: 0.9rem;
+    }
+}
