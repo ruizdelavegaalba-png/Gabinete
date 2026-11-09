@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce la misión y los valores de Gabinete y escríbenos tu pregunta curiosa.">
+    <meta name="author" content="Alba Ruiz de la Vega">
+    <title>Gabinete · Nosotros</title>
+    <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/CLOUD_NAME/image/upload/gabinete/icono.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="cabecera">
+        <a class="cabeceraLogo" href="index.html">
+            <img class="cabeceraIcono" src="https://res.cloudinary.com/CLOUD_NAME/image/upload/gabinete/icono.svg" alt="" width="40" height="40">
+            <span class="cabeceraNombre">Gabinete</span>
+        </a>
+        <nav aria-label="Menú principal">
+            <ul class="menuLista">
+                <li><a class="menuEnlace" href="index.html">Inicio</a></li>
+                <li><a class="menuEnlace" href="categories.html">Categorías</a></li>
+                <li><a class="menuEnlace" href="library.html">Biblioteca</a></li>
+                <li><a class="menuEnlace" href="authors.html">Autores</a></li>
+                <li><a class="menuEnlaceActivo" href="about.html" aria-current="page">Nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="cargador" aria-hidden="true"></div>
+    </header>
+    <main class="pagina">
+        <h1 class="paginaTitulo">Nosotros</h1>
+        <p class="paginaIntro">Gabinete es un pequeño rincón para escuchar podcasts sobre las curiosidades del mundo.</p>
+        <section aria-labelledby="misionTitulo">
+            <h2 class="nosotrosTitulo" id="misionTitulo">Nuestra misión</h2>
+            <p class="misionTexto">Igual que los antiguos gabinetes de curiosidades reunían en una sola sala fósiles, mapas, instrumentos y objetos extraños, nosotros reunimos en un solo lugar podcasts sobre ciencia, historia, naturaleza, lenguaje, cuerpo humano y espacio.</p>
+            <p class="misionTexto">Queremos que cualquier persona, tenga la edad que tenga, pueda resolver esas dudas que aparecen en el día a día y descubrir que el mundo es mucho más sorprendente de lo que parece.</p>
+        </section>
+        <section aria-labelledby="valoresTitulo">
+            <h2 class="nosotrosTitulo" id="valoresTitulo">Nuestros valores</h2>
+            <ul class="valoresLista">
+                <li>
+                    <article class="valorTarjeta">
+                        <h3 class="valorTitulo">Curiosidad</h3>
+                        <p class="valorTexto">Ninguna pregunta es tonta. Partimos de las dudas más sencillas para llegar a respuestas sorprendentes.</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="valorTarjeta">
+                        <h3 class="valorTitulo">Rigor</h3>
+                        <p class="valorTexto">Contrastamos cada dato con fuentes fiables y, cuando la ciencia todavía no tiene una respuesta clara, lo decimos.</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="valorTarjeta">
+                        <h3 class="valorTitulo">Diversión</h3>
+                        <p class="valorTexto">Aprender no tiene por qué ser aburrido. Contamos cada historia con humor y con ganas de pasarlo bien.</p>
+                    </article>
+                </li>
+            </ul>
+        </section>
+        <section aria-labelledby="contactoTitulo">
+            <h2 class="nosotrosTitulo" id="contactoTitulo">Contacto</h2>
+            <p class="misionTexto">¿Tienes una pregunta que nadie te ha sabido responder? Escríbenos y quizá la convirtamos en un episodio.</p>
+            <form class="formulario" action="#" method="post">
+                <label class="formularioEtiqueta" for="nombre">Nombre</label>
+                <input class="formularioEntrada" type="text" id="nombre" name="nombre" autocomplete="name" required>
+                <label class="formularioEtiqueta" for="email">Email</label>
+                <input class="formularioEntrada" type="email" id="email" name="email" autocomplete="email" required>
+                <label class="formularioEtiqueta" for="pregunta">Tu pregunta</label>
+                <textarea class="formularioArea" id="pregunta" name="pregunta" rows="5" required></textarea>
+                <button class="formularioBoton" type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer class="pie">
+        <p>© 2026 Alba Ruiz de la Vega</p>
+    </footer>
+</body>
+</html>
