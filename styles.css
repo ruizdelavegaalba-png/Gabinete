@@ -56,7 +56,8 @@ a {
 
 a:focus-visible,
 .formularioBoton:focus-visible,
-.transcripcionResumen:focus-visible {
+.transcripcionResumen:focus-visible,
+.botonVolver:focus-visible {
     outline: 2px solid var(--colorCian);
     outline-offset: 3px;
 }
@@ -414,7 +415,8 @@ ol {
 }
 
 .categoriasEnlace,
-.autorEnlace {
+.autorEnlace,
+.botonVolver {
     display: inline-block;
     padding: 0.6rem 1.4rem;
     border: 1px solid var(--colorCian);
@@ -422,18 +424,32 @@ ol {
     background-color: var(--colorCristal);
     font-weight: 500;
     text-decoration: none;
-    transition: background-color var(--transicionBase), border-color var(--transicionBase), transform var(--transicionBase);
+    transition: background-color var(--transicionBase), border-color var(--transicionBase), color var(--transicionBase), transform var(--transicionBase);
 }
 
 .categoriasEnlace:hover,
-.autorEnlace:hover {
+.autorEnlace:hover,
+.botonVolver:hover,
+.botonVolver:focus-visible {
     border-color: var(--colorVioleta);
     background-color: var(--colorBrilloVioleta);
+    color: var(--colorTexto);
 }
 
 .categoriasEnlace:active,
-.autorEnlace:active {
+.autorEnlace:active,
+.botonVolver:active {
     transform: scale(0.95);
+}
+
+.botonVolver {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin-bottom: 1.25rem;
+    padding: 0.3rem 0.9rem;
+    color: var(--colorTextoSuave);
+    font-size: 0.875rem;
 }
 
 .buscadorCampo::placeholder,
