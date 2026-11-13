@@ -83,14 +83,13 @@ All 12 podcasts are in `podcast.html` and all 120 episodes are in `episode.html`
 ## Things to improve
 
 - Make the search field and the contact form work with JavaScript.
-- Use a different audio file for each episode.
 - Load the podcasts and episodes from a JSON file.
 - Save the favourites and the listening progress for each user.
 - Add a light and dark mode switch.
 
 ## Credits
 
-- Voices generated with ElevenLabs.
+- Each episode has its own audio, generated with ElevenLabs. The flamingos episode is a dialogue with two voices.
 - Images and logo created for this project.
 - Images and audio hosted on Cloudinary.
 - Fonts from Google Fonts (Barlow and Barlow Condensed).
