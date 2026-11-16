@@ -60,17 +60,23 @@ You need an internet connection, because the images, the audio and the fonts are
 
 ## How it works without JavaScript
 
-All 12 podcasts are in `podcast.html` and all 120 episodes are in `episode.html`. Each one is a block with its own id, and the links point to that id, for example `podcast.html#mitosAlMicroscopio`. With CSS I hide all the blocks and I only show the one in the link with `:target`. If there is no id in the link, `:has` shows a default block.
+All 12 podcasts are in `podcast.html` and all 120 episodes are in `episode.html`. Each one is a block with its own id, and the links point to that id, for example `podcast.html#mythsUnderTheMicroscope`. With CSS I hide all the blocks and I only show the one in the link with `:target`. If there is no id in the link, `:has` shows a default block.
 
 ```css
-.podcast {
+.podcast,
+.podcastDefault {
     display: none;
 }
 
-.podcast:target {
+.podcast:target,
+.podcastList:not(:has(:target)) .podcastDefault {
     display: flex;
 }
 ```
+
+## Code names
+
+All the names in the code (classes, ids and CSS variables) are in English and in camelCase, for example `cardTitle`, `backButton` or `--colorCyan`. The texts that the user sees are in Spanish (`lang="es"`).
 
 ## What I learned
 
