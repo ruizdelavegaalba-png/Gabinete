@@ -1,0 +1,990 @@
+:root {
+    --colorFondo: #0E141C;
+    --colorFondoOscuro: #171328;
+    --colorCian: #4FD1E8;
+    --colorVioleta: #A86BFF;
+    --colorAzul: #2F80ED;
+    --colorTexto: #F2F4F8;
+    --colorTextoSuave: #A9B4C7;
+    --colorAmbar: #F2B84B;
+    --colorVerde: #5FD38D;
+    --colorRosa: #FF7A9A;
+    --colorCristal: rgba(23, 19, 40, 0.6);
+    --colorBordeCristal: rgba(79, 209, 232, 0.25);
+    --colorBrilloVioleta: rgba(168, 107, 255, 0.18);
+    --degradadoPrincipal: linear-gradient(90deg, var(--colorCian), var(--colorVioleta));
+    --transicionBase: 0.3s ease;
+    --fuenteTitulos: "Barlow Condensed", sans-serif;
+    --fuenteTexto: "Barlow", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--colorFondo);
+    color: var(--colorTexto);
+    font-family: var(--fuenteTexto);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fuenteTitulos);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+a:focus-visible,
+.formularioBoton:focus-visible,
+.transcripcionResumen:focus-visible,
+.botonVolver:focus-visible {
+    outline: 2px solid var(--colorCian);
+    outline-offset: 3px;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.textoOculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+    background-color: var(--colorCristal);
+    border-bottom: 1px solid var(--colorBordeCristal);
+}
+
+.cabeceraLogo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform var(--transicionBase);
+}
+
+.cabeceraIcono {
+    filter: drop-shadow(0 0 6px var(--colorCian));
+}
+
+.cabeceraNombre {
+    font-family: var(--fuenteTitulos);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: var(--degradadoPrincipal);
+    background-clip: text;
+    color: transparent;
+}
+
+.menuLista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.menuEnlace,
+.menuEnlaceActivo {
+    display: block;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color var(--transicionBase), color var(--transicionBase), transform var(--transicionBase);
+}
+
+.menuEnlace {
+    color: var(--colorTextoSuave);
+}
+
+.menuEnlaceActivo {
+    color: var(--colorTexto);
+    border-color: var(--colorCian);
+    box-shadow: 0 0 10px var(--colorBordeCristal);
+}
+
+.menuEnlace:hover,
+.menuEnlaceActivo:hover {
+    color: var(--colorTexto);
+    background-color: var(--colorBrilloVioleta);
+}
+
+.cabeceraLogo:active,
+.menuEnlace:active,
+.menuEnlaceActivo:active {
+    transform: scale(0.95);
+}
+
+.cargador {
+    width: 28px;
+    height: 28px;
+    border: 3px solid var(--colorBordeCristal);
+    border-top-color: var(--colorCian);
+    border-radius: 50%;
+    animation: cargaDesvanecida 1s ease-in forwards;
+}
+
+@keyframes cargaDesvanecida {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.inicio,
+.pagina,
+.detalle {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 4rem;
+}
+
+.inicioTitulo,
+.paginaTitulo {
+    margin-bottom: 2rem;
+    font-size: 2.75rem;
+    text-align: center;
+}
+
+.destacadoTitulo,
+.nosotrosTitulo,
+.bibliotecaTitulo,
+.podcastsTitulo,
+.categoriasTitulo {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: var(--colorCian);
+}
+
+.destacadoTarjeta {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding: 1.5rem;
+}
+
+.destacadoImagen {
+    width: 45%;
+    height: auto;
+    border-radius: 12px;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.destacadoTexto {
+    flex: 1;
+}
+
+.destacadoEpisodio {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.destacadoDatos {
+    margin-bottom: 1rem;
+    color: var(--colorCian);
+    font-weight: 500;
+}
+
+.destacadoDescripcion {
+    margin-bottom: 1.5rem;
+}
+
+.podcastsBarra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.podcastsInsignia,
+.episodioEtiqueta,
+.destacadoBoton,
+.formularioBoton {
+    width: fit-content;
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    background: var(--degradadoPrincipal);
+    color: var(--colorFondo);
+    font-weight: 600;
+}
+
+.destacadoBoton,
+.formularioBoton {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    text-decoration: none;
+}
+
+.formularioBoton {
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.destacadoBoton:hover,
+.formularioBoton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px var(--colorVioleta);
+}
+
+.destacadoBoton:active,
+.formularioBoton:active {
+    transform: scale(0.96);
+}
+
+.buscadorCampo,
+.formularioEntrada,
+.formularioArea {
+    width: 100%;
+    padding: 0.6rem 1.1rem;
+    border: 1px solid var(--colorBordeCristal);
+    background-color: var(--colorCristal);
+    color: var(--colorTexto);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color var(--transicionBase), box-shadow var(--transicionBase);
+}
+
+.buscadorCampo {
+    max-width: 320px;
+    border-radius: 999px;
+}
+
+.buscadorCampo:hover,
+.formularioEntrada:hover,
+.formularioArea:hover {
+    border-color: var(--colorCian);
+}
+
+.buscadorCampo:focus,
+.buscadorCampo:focus-visible,
+.formularioEntrada:focus,
+.formularioEntrada:focus-visible,
+.formularioArea:focus,
+.formularioArea:focus-visible {
+    outline: none;
+    border-color: var(--colorVioleta);
+    box-shadow: 0 0 0 3px var(--colorBrilloVioleta), 0 0 14px var(--colorVioleta);
+}
+
+.buscadorCampo:active,
+.formularioEntrada:active,
+.formularioArea:active {
+    border-color: var(--colorAzul);
+}
+
+.podcastsCuadricula {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1.5rem;
+    row-gap: 5rem;
+    margin-top: 5rem;
+}
+
+.tarjeta,
+.valorTarjeta,
+.formulario,
+.continuarTarjeta,
+.autorFicha,
+.lateral,
+.episodiosContador,
+.episodioContenido,
+.destacadoTarjeta {
+    border: 1px solid var(--colorBordeCristal);
+    border-radius: 16px;
+    background-color: var(--colorCristal);
+}
+
+.destacadoBoton,
+.formularioBoton,
+.categoriaCiencia,
+.categoriaHistoria,
+.categoriaNaturaleza,
+.categoriaLenguaje,
+.categoriaCuerpo,
+.categoriaEspacio,
+.continuarTarjeta,
+.autorFicha,
+.valorTarjeta {
+    transition: transform var(--transicionBase), box-shadow var(--transicionBase);
+}
+
+.tarjeta {
+    height: 100%;
+    text-align: center;
+    transition: transform var(--transicionBase), border-color var(--transicionBase), box-shadow var(--transicionBase);
+}
+
+.tarjeta:hover,
+.tarjeta:focus-within {
+    transform: translateY(-6px);
+    border-color: var(--colorCian);
+    box-shadow: 0 0 18px var(--colorBordeCristal);
+}
+
+.tarjeta:active {
+    transform: translateY(-2px) scale(0.98);
+}
+
+.tarjetaEnlace {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 0 1.25rem 1.5rem;
+    border-radius: 16px;
+    text-decoration: none;
+}
+
+.tarjetaImagen {
+    width: 120px;
+    height: 120px;
+    margin-top: -60px;
+    border: 3px solid var(--colorCian);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 16px var(--colorBordeCristal);
+}
+
+.tarjetaTitulo {
+    margin: 1rem 0 0.4rem;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.tarjetaAutor {
+    font-size: 0.95rem;
+}
+
+.categoriasTitulo {
+    margin-top: 4rem;
+}
+
+.categoriasLista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.categoriasEnlace,
+.autorEnlace,
+.botonVolver {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    border: 1px solid var(--colorCian);
+    border-radius: 999px;
+    background-color: var(--colorCristal);
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color var(--transicionBase), border-color var(--transicionBase), color var(--transicionBase), transform var(--transicionBase);
+}
+
+.categoriasEnlace:hover,
+.autorEnlace:hover,
+.botonVolver:hover,
+.botonVolver:focus-visible {
+    border-color: var(--colorVioleta);
+    background-color: var(--colorBrilloVioleta);
+    color: var(--colorTexto);
+}
+
+.categoriasEnlace:active,
+.autorEnlace:active,
+.botonVolver:active {
+    transform: scale(0.95);
+}
+
+.botonVolver {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin-bottom: 1.25rem;
+    padding: 0.3rem 0.9rem;
+    color: var(--colorTextoSuave);
+    font-size: 0.875rem;
+}
+
+.buscadorCampo::placeholder,
+.tarjetaAutor,
+.destacadoDescripcion,
+.lateralDescripcion,
+.paginaIntro,
+.categoriaDescripcion,
+.continuarRestante,
+.autorFrase,
+.misionTexto,
+.valorTexto,
+.episodiosTabla td,
+.episodioDatos,
+.transcripcionTexto,
+.pie {
+    color: var(--colorTextoSuave);
+}
+
+.podcast,
+.podcastPorDefecto,
+.episodio,
+.episodioPorDefecto {
+    display: none;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.podcast:target,
+.podcastPorDefecto:target,
+.listaPodcasts:not(:has(:target)) .podcastPorDefecto,
+.episodio:target,
+.episodioPorDefecto:target,
+.listaEpisodios:not(:has(:target)) .episodioPorDefecto {
+    display: flex;
+}
+
+.lateral {
+    flex: 0 0 300px;
+    padding: 1.5rem;
+}
+
+.lateralImagen {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.lateralTitulo,
+.lateralAutor {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--colorBordeCristal);
+}
+
+.lateralTitulo {
+    font-size: 1.9rem;
+}
+
+.lateralAutor {
+    color: var(--colorCian);
+    font-weight: 500;
+}
+
+.lateralEnlaceImagen {
+    display: block;
+    border-radius: 12px;
+    transition: opacity var(--transicionBase), transform var(--transicionBase);
+}
+
+.lateralEnlaceImagen:hover {
+    opacity: 0.85;
+}
+
+.lateralEnlaceImagen:active {
+    transform: scale(0.98);
+}
+
+.episodios {
+    flex: 1;
+    min-width: 0;
+}
+
+.episodiosContador {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    padding: 0.6rem 1.4rem;
+    font-size: 1.5rem;
+}
+
+.episodiosTabla {
+    width: 100%;
+    border: 1px solid var(--colorBordeCristal);
+    border-collapse: collapse;
+    background-color: var(--colorCristal);
+}
+
+.episodiosTabla th,
+.episodiosTabla td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--colorBordeCristal);
+    text-align: left;
+}
+
+.episodiosTabla th {
+    background-color: var(--colorFondoOscuro);
+    color: var(--colorCian);
+    font-family: var(--fuenteTitulos);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.episodiosEnlace,
+.categoriaEnlace,
+.continuarEnlace,
+.lateralEnlace,
+.episodioEnlace,
+.transcripcionResumen {
+    text-decoration: none;
+    transition: color var(--transicionBase);
+}
+
+.episodiosEnlace,
+.categoriaEnlace,
+.continuarEnlace {
+    color: var(--colorTexto);
+    font-weight: 500;
+}
+
+.episodioEnlace {
+    color: var(--colorCian);
+    font-weight: 600;
+}
+
+.episodiosEnlace:hover,
+.categoriaEnlace:hover,
+.continuarEnlace:hover,
+.lateralEnlace:hover,
+.episodioEnlace:hover {
+    color: var(--colorCian);
+    text-decoration: underline;
+}
+
+.episodiosEnlace:active,
+.categoriaEnlace:active,
+.continuarEnlace:active,
+.lateralEnlace:active,
+.episodioEnlace:active {
+    color: var(--colorVioleta);
+}
+
+.episodioContenido {
+    flex: 1;
+    min-width: 0;
+    padding: 2rem;
+}
+
+.episodioTitulo {
+    margin: 1rem 0 0.5rem;
+    font-size: 2.4rem;
+}
+
+.episodioDatos {
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.episodioTexto {
+    margin-bottom: 1rem;
+}
+
+.episodioAudio {
+    display: block;
+    width: 100%;
+    margin: 1.5rem 0;
+    border: 1px solid var(--colorCian);
+    border-radius: 999px;
+    box-shadow: 0 0 14px var(--colorBordeCristal);
+}
+
+.transcripcion {
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--colorBordeCristal);
+    border-radius: 12px;
+    background-color: var(--colorFondoOscuro);
+}
+
+.transcripcionResumen {
+    color: var(--colorCian);
+    font-family: var(--fuenteTitulos);
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.transcripcionResumen:hover {
+    color: var(--colorTexto);
+}
+
+.transcripcionTexto {
+    margin-top: 0.75rem;
+}
+
+.pie {
+    margin-top: auto;
+    padding: 1.5rem 2rem;
+    border-top: 1px solid var(--colorBordeCristal);
+    background-color: var(--colorCristal);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.paginaIntro {
+    max-width: 640px;
+    margin: -1rem auto 2.5rem;
+    text-align: center;
+}
+
+.categoriaCuadricula {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.categoriaCiencia,
+.categoriaHistoria,
+.categoriaNaturaleza,
+.categoriaLenguaje,
+.categoriaCuerpo,
+.categoriaEspacio {
+    padding: 1.5rem;
+    border: 1px solid;
+    border-top-width: 4px;
+    border-radius: 16px;
+    background-color: var(--colorCristal);
+}
+
+.categoriaCiencia {
+    border-color: var(--colorCian);
+}
+
+.categoriaHistoria {
+    border-color: var(--colorAmbar);
+}
+
+.categoriaNaturaleza {
+    border-color: var(--colorVerde);
+}
+
+.categoriaLenguaje {
+    border-color: var(--colorVioleta);
+}
+
+.categoriaCuerpo {
+    border-color: var(--colorRosa);
+}
+
+.categoriaEspacio {
+    border-color: var(--colorAzul);
+}
+
+.categoriaCiencia:hover,
+.categoriaHistoria:hover,
+.categoriaNaturaleza:hover,
+.categoriaLenguaje:hover,
+.categoriaCuerpo:hover,
+.categoriaEspacio:hover,
+.continuarTarjeta:hover,
+.autorFicha:hover,
+.valorTarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 18px var(--colorBordeCristal);
+}
+
+.categoriaCiencia:target,
+.categoriaHistoria:target,
+.categoriaNaturaleza:target,
+.categoriaLenguaje:target,
+.categoriaCuerpo:target,
+.categoriaEspacio:target {
+    box-shadow: 0 0 24px var(--colorVioleta);
+}
+
+.categoriaTitulo {
+    font-size: 1.75rem;
+}
+
+.categoriaContador {
+    margin: 0.25rem 0 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.categoriaDescripcion {
+    margin-bottom: 1rem;
+}
+
+.categoriaLista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--colorBordeCristal);
+}
+
+.continuarLista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.continuarTarjeta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+    padding: 1.25rem;
+}
+
+.continuarImagen {
+    flex: 0 0 80px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.continuarTexto {
+    flex: 1;
+    min-width: 0;
+}
+
+.continuarPodcast {
+    color: var(--colorCian);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.continuarTitulo {
+    margin: 0.25rem 0 0.75rem;
+    font-size: 1.3rem;
+}
+
+.continuarProgreso {
+    width: 100%;
+    height: 8px;
+    accent-color: var(--colorCian);
+}
+
+.continuarRestante {
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.autoresCuadricula {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.autorFicha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.autorFoto {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 1rem;
+    border: 2px solid var(--colorVioleta);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 14px var(--colorBrilloVioleta);
+}
+
+.autorNombre {
+    font-size: 1.5rem;
+}
+
+.autorPodcast {
+    color: var(--colorCian);
+    font-weight: 500;
+}
+
+.autorFrase {
+    margin: 0.75rem 0 1.25rem;
+    font-style: italic;
+}
+
+.autorEnlace {
+    margin-top: auto;
+}
+
+.nosotrosTitulo {
+    margin-top: 3rem;
+}
+
+.misionTexto {
+    max-width: 760px;
+    margin-bottom: 1rem;
+}
+
+.valoresLista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.valorTarjeta {
+    height: 100%;
+    padding: 1.5rem;
+}
+
+.valorTitulo {
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    max-width: 560px;
+    margin-top: 1.5rem;
+    padding: 2rem;
+}
+
+.formularioEtiqueta {
+    font-weight: 600;
+}
+
+.formularioEntrada,
+.formularioArea {
+    margin-bottom: 1rem;
+    border-radius: 12px;
+}
+
+.formularioArea {
+    resize: vertical;
+}
+
+@media (max-width: 1024px) {
+    .podcastsCuadricula,
+    .categoriaCuadricula,
+    .continuarLista,
+    .autoresCuadricula,
+    .valoresLista {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lateral {
+        flex-basis: 240px;
+    }
+}
+
+@media (max-width: 700px) {
+    .cabecera {
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .menu {
+        order: 3;
+        width: 100%;
+    }
+
+    .menuLista {
+        justify-content: center;
+    }
+
+    .inicio,
+    .pagina,
+    .detalle {
+        padding: 1.5rem 1rem 3rem;
+    }
+
+    .inicioTitulo,
+    .paginaTitulo {
+        font-size: 2.1rem;
+    }
+
+    .podcastsCuadricula,
+    .categoriaCuadricula,
+    .continuarLista,
+    .autoresCuadricula,
+    .valoresLista {
+        grid-template-columns: 1fr;
+    }
+
+    .destacadoTarjeta,
+    .podcast,
+    .podcastPorDefecto,
+    .episodio,
+    .episodioPorDefecto {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .destacadoImagen {
+        width: 100%;
+    }
+
+    .lateral {
+        flex: none;
+    }
+
+    .lateralImagen {
+        max-width: 220px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .episodioContenido,
+    .formulario {
+        padding: 1.25rem;
+    }
+
+    .episodioTitulo {
+        font-size: 1.9rem;
+    }
+
+    .episodiosTabla th,
+    .episodiosTabla td {
+        padding: 0.6rem 0.5rem;
+        font-size: 0.9rem;
+    }
+}
