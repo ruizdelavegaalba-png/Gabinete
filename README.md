@@ -127,4 +127,4 @@ I checked all the pages with the [W3C Markup Validation Service](https://validat
 
 ## Author
 
-Alba Ruiz de la Vega · DAW · CEI · 2026
+Alba Ruiz de la Vega 
