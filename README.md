@@ -11,36 +11,44 @@ I built it only with HTML and CSS for the DIW course (DAW, CEI).
 
 ### Home
 
-<img width="1895" height="905" alt="image" src="https://github.com/user-attachments/assets/f96fb756-19d3-4c2d-819c-19cefa0f6919" />
+<img width="1881" height="910" alt="image" src="https://github.com/user-attachments/assets/f334b542-fe7f-4ed8-9812-b3c346615b81" />
+
 
 
 ### Podcast
 
-<img width="1886" height="897" alt="image" src="https://github.com/user-attachments/assets/15bcb49c-c84f-498f-88db-aab122a218bf" />
+<img width="1877" height="907" alt="image" src="https://github.com/user-attachments/assets/85cac2fc-d9c7-4d43-bfcd-f2a6d6bcaa06" />
+
 
 
 ### Episode
 
-<img width="1876" height="898" alt="image" src="https://github.com/user-attachments/assets/9a14a753-859d-454e-a8b5-0f061e1a71ae" />
+<img width="1877" height="865" alt="image" src="https://github.com/user-attachments/assets/e718fbf3-50d1-4eab-91e0-084338f5c619" />
+
 
 ### Categories
-<img width="1877" height="902" alt="image" src="https://github.com/user-attachments/assets/e43b23e1-a99e-48d9-bb95-b4030b56a00d" />
+<img width="1865" height="891" alt="image" src="https://github.com/user-attachments/assets/63bc0101-0bd5-4e11-b122-e67ba8050b09" />
+
 
 
 ### Library
-<img width="1886" height="898" alt="image" src="https://github.com/user-attachments/assets/3763c7e2-e169-4751-97a1-c2ca8144b8a3" />
+<img width="1872" height="880" alt="image" src="https://github.com/user-attachments/assets/eaf8cbed-d3a0-440b-a0fe-0a2d4ae69704" />
+
 
 
 ### Authors
-<img width="1890" height="906" alt="image" src="https://github.com/user-attachments/assets/346fea5d-21fe-459b-97b2-028a5effd1cb" />
+<img width="1868" height="896" alt="image" src="https://github.com/user-attachments/assets/fc7012a4-6c34-4138-aa33-c33598bbc261" />
+
 
 ### Us
-<img width="1891" height="895" alt="image" src="https://github.com/user-attachments/assets/9d2f1242-78a2-4500-953f-e1a2f7054e2d" />
+<img width="1872" height="892" alt="image" src="https://github.com/user-attachments/assets/a9aa1955-3716-4c91-b525-75dd7803ef5f" />
+
 
 
 ### Mobile
 
-<img width="1107" height="2048" alt="WhatsApp Image 2026-11-16 at 12 30 51" src="https://github.com/user-attachments/assets/70799459-d572-45b7-b72a-fd1f6c608c91" />
+<img width="857" height="1600" alt="Image 2026-11-19 at 10 18 25" src="https://github.com/user-attachments/assets/add57f2c-8c32-4d68-a05d-40d2e0375cbd" />
+
 
 
 ## Pages
