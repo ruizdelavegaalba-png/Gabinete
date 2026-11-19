@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Categorías de Gabinete: ciencia, historia, naturaleza, lenguaje, cuerpo humano y espacio, con sus podcasts.">
+    <meta name="author" content="Alba Ruiz de la Vega">
+    <title>Gabinete · Categorías</title>
+    <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/daul6tzck/image/upload/icono_tronwy.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <a class="headerLogo" href="index.html">
+            <img class="headerIcon" src="https://res.cloudinary.com/daul6tzck/image/upload/icono_tronwy.svg" alt="" width="40" height="40">
+            <span class="headerName">Gabinete</span>
+        </a>
+        <nav class="menu" aria-label="Menú principal">
+            <ul class="menuList">
+                <li><a class="menuLink" href="index.html">Inicio</a></li>
+                <li><a class="menuLinkActive" href="categories.html" aria-current="page">Categorías</a></li>
+                <li><a class="menuLink" href="library.html">Biblioteca</a></li>
+                <li><a class="menuLink" href="authors.html">Autores</a></li>
+                <li><a class="menuLink" href="about.html">Nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="loader" aria-hidden="true"></div>
+    </header>
+    <main class="page">
+        <h1 class="pageTitle">Categorías</h1>
+        <p class="pageIntro">Nuestros 12 podcasts ordenados por temas. Elige una categoría y encuentra tu próxima curiosidad.</p>
+        <div class="categoryGrid">
+            <article class="categoryScience" id="science">
+                <h2 class="categoryTitle">Ciencia</h2>
+                <p class="categoryCount">3 podcasts</p>
+                <p class="categoryDescription">Preguntas cotidianas, mitos desmontados y la química que hay en la cocina. La ciencia explicada para cualquier persona curiosa.</p>
+                <ul class="categoryList">
+                    <li><a class="categoryLink" href="podcast.html#whyIsThat">¿Y eso por qué?</a></li>
+                    <li><a class="categoryLink" href="podcast.html#mythsUnderTheMicroscope">Mitos al microscopio</a></li>
+                    <li><a class="categoryLink" href="podcast.html#cookingWithScience">Cocina con ciencia</a></li>
+                </ul>
+            </article>
+            <article class="categoryHistory" id="history">
+                <h2 class="categoryTitle">Historia</h2>
+                <p class="categoryCount">3 podcasts</p>
+                <p class="categoryDescription">Objetos de todos los días, inventos que fracasaron y noticias que cambiaron el mundo hace más de cien años.</p>
+                <ul class="categoryList">
+                    <li><a class="categoryLink" href="podcast.html#objectsWithHistory">Objetos con historia</a></li>
+                    <li><a class="categoryLink" href="podcast.html#failedInventions">Inventos fallidos</a></li>
+                    <li><a class="categoryLink" href="podcast.html#nineteenthCenturyNews">Noticias del siglo XIX</a></li>
+                </ul>
+            </article>
+            <article class="categoryNature" id="nature">
+                <h2 class="categoryTitle">Naturaleza</h2>
+                <p class="categoryCount">3 podcasts</p>
+                <p class="categoryDescription">Animales extraños, insectos sorprendentes y lugares del planeta que parecen sacados de otro mundo.</p>
+                <ul class="categoryList">
+                    <li><a class="categoryLink" href="podcast.html#platypusCorner">El rincón del ornitorrinco</a></li>
+                    <li><a class="categoryLink" href="podcast.html#coolBugs">Bichos que molan</a></li>
+                    <li><a class="categoryLink" href="podcast.html#mapMysteries">Misterios del mapa</a></li>
+                </ul>
+            </article>
+            <article class="categoryLanguage" id="language">
+                <h2 class="categoryTitle">Lenguaje</h2>
+                <p class="categoryCount">1 podcast</p>
+                <p class="categoryDescription">El origen de las palabras que usamos cada día y los viajes que hicieron hasta llegar al español.</p>
+                <ul class="categoryList">
+                    <li><a class="categoryLink" href="podcast.html#travelingWords">Palabras viajeras</a></li>
+                </ul>
+            </article>
+            <article class="categoryBody" id="humanBody">
+                <h2 class="categoryTitle">Cuerpo humano</h2>
+                <p class="categoryCount">1 podcast</p>
+                <p class="categoryDescription">Huesos, órganos y reacciones curiosas: el manual de instrucciones del cuerpo que nadie nos dio al nacer.</p>
+                <ul class="categoryList">
+                    <li><a class="categoryLink" href="podcast.html#humanBody">Cuerpo humano, manual de uso</a></li>
+                </ul>
+            </article>
+            <article class="categorySpace" id="space">
+                <h2 class="categoryTitle">Espacio</h2>
+                <p class="categoryCount">1 podcast</p>
+                <p class="categoryDescription">Planetas, estrellas y galaxias contados sin prisas y sin necesidad de telescopio.</p>
+                <ul class="categoryList">
+                    <li><a class="categoryLink" href="podcast.html#pocketSky">Cielo de bolsillo</a></li>
+                </ul>
+            </article>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 Alba Ruiz de la Vega</p>
+    </footer>
+</body>
+</html>
