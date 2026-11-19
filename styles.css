@@ -209,8 +209,7 @@ ol {
 
 .featuredImage,
 .sidebarImage,
-.continueImage,
-.authorPhoto {
+.continueImage {
     height: auto;
     border-radius: 24px;
 }
@@ -387,15 +386,20 @@ ol {
     text-decoration: none;
 }
 
-.cardImage {
+.cardImage,
+.authorPhoto {
     width: 200px;
-    height: 200px;
-    margin-top: -100px;
+    height: auto;
+    aspect-ratio: 1;
     border: 2px solid var(--colorCyan);
     border-radius: 50%;
     object-fit: cover;
-    object-view-box: inset(3% 8% 30% 20%);
     box-shadow: 0 0 16px var(--colorGlassBorder);
+}
+
+.cardImage {
+    margin-top: -100px;
+    object-view-box: inset(3% 8% 30% 20%);
 }
 
 .cardTitle {
@@ -826,8 +830,8 @@ ol {
 }
 
 .authorPhoto {
-    width: 180px;
     margin-bottom: 1rem;
+    object-view-box: inset(3% 12% 38% 18%);
 }
 
 .authorName {
