@@ -1,18 +1,21 @@
 :root {
-    --colorFondo: #0E141C;
-    --colorFondoOscuro: #171328;
-    --colorCian: #4FD1E8;
-    --colorVioleta: #A86BFF;
-    --colorAzul: #2F80ED;
-    --colorTexto: #F2F4F8;
-    --colorTextoSuave: #A9B4C7;
-    --colorCristal: rgba(23, 19, 40, 0.6);
-    --colorBordeCristal: rgba(79, 209, 232, 0.25);
-    --colorBrilloVioleta: rgba(168, 107, 255, 0.18);
-    --degradadoPrincipal: linear-gradient(90deg, var(--colorCian), var(--colorVioleta));
-    --transicionBase: 0.3s ease;
-    --fuenteTitulos: "Barlow Condensed", sans-serif;
-    --fuenteTexto: "Barlow", sans-serif;
+    --colorBackground: #0E141C;
+    --colorBackgroundDark: #171328;
+    --colorCyan: #4FD1E8;
+    --colorViolet: #A86BFF;
+    --colorBlue: #2F80ED;
+    --colorText: #F2F4F8;
+    --colorTextSoft: #A9B4C7;
+    --colorAmber: #F2B84B;
+    --colorGreen: #5FD38D;
+    --colorPink: #FF7A9A;
+    --colorGlass: rgba(23, 19, 40, 0.6);
+    --colorGlassBorder: rgba(79, 209, 232, 0.25);
+    --colorVioletGlow: rgba(168, 107, 255, 0.18);
+    --gradientMain: linear-gradient(90deg, var(--colorCyan), var(--colorViolet));
+    --transitionBase: 0.3s ease;
+    --fontTitles: "Barlow Condensed", sans-serif;
+    --fontText: "Barlow", sans-serif;
 }
 
 *,
@@ -24,10 +27,12 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    background-color: var(--colorFondo);
-    color: var(--colorTexto);
-    font-family: var(--fuenteTexto);
+    background-color: var(--colorBackground);
+    color: var(--colorText);
+    font-family: var(--fontText);
     font-size: 1rem;
     line-height: 1.5;
 }
@@ -35,7 +40,7 @@ body {
 h1,
 h2,
 h3 {
-    font-family: var(--fuenteTitulos);
+    font-family: var(--fontTitles);
     font-weight: 700;
     line-height: 1.2;
 }
@@ -49,8 +54,11 @@ a {
     color: inherit;
 }
 
-a:focus-visible {
-    outline: 2px solid var(--colorCian);
+a:focus-visible,
+.formButton:focus-visible,
+.transcriptSummary:focus-visible,
+.backButton:focus-visible {
+    outline: 2px solid var(--colorCyan);
     outline-offset: 3px;
 }
 
@@ -59,7 +67,7 @@ ol {
     list-style: none;
 }
 
-.tituloOculto {
+.hiddenText {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -68,88 +76,88 @@ ol {
     white-space: nowrap;
 }
 
-.cabecera {
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
     padding: 1rem 2rem;
-    background-color: var(--colorCristal);
-    border-bottom: 1px solid var(--colorBordeCristal);
+    background-color: var(--colorGlass);
+    border-bottom: 1px solid var(--colorGlassBorder);
 }
 
-.cabeceraLogo {
+.headerLogo {
     display: flex;
     align-items: center;
     gap: 0.6rem;
     text-decoration: none;
     border-radius: 8px;
-    transition: transform var(--transicionBase);
+    transition: transform var(--transitionBase);
 }
 
-.cabeceraIcono {
-    filter: drop-shadow(0 0 6px var(--colorCian));
+.headerIcon {
+    filter: drop-shadow(0 0 6px var(--colorCyan));
 }
 
-.cabeceraNombre {
-    font-family: var(--fuenteTitulos);
+.headerName {
+    font-family: var(--fontTitles);
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1px;
-    background: var(--degradadoPrincipal);
+    background: var(--gradientMain);
     background-clip: text;
     color: transparent;
 }
 
-.menuLista {
+.menuList {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
 }
 
-.menuEnlace,
-.menuEnlaceActivo {
+.menuLink,
+.menuLinkActive {
     display: block;
     padding: 0.4rem 0.9rem;
     border: 1px solid transparent;
     border-radius: 999px;
     font-weight: 500;
     text-decoration: none;
-    transition: background-color var(--transicionBase), color var(--transicionBase), transform var(--transicionBase);
+    transition: background-color var(--transitionBase), color var(--transitionBase), transform var(--transitionBase);
 }
 
-.menuEnlace {
-    color: var(--colorTextoSuave);
+.menuLink {
+    color: var(--colorTextSoft);
 }
 
-.menuEnlaceActivo {
-    color: var(--colorTexto);
-    border-color: var(--colorCian);
-    box-shadow: 0 0 10px var(--colorBordeCristal);
+.menuLinkActive {
+    color: var(--colorText);
+    border-color: var(--colorCyan);
+    box-shadow: 0 0 10px var(--colorGlassBorder);
 }
 
-.menuEnlace:hover,
-.menuEnlaceActivo:hover {
-    color: var(--colorTexto);
-    background-color: var(--colorBrilloVioleta);
+.menuLink:hover,
+.menuLinkActive:hover {
+    color: var(--colorText);
+    background-color: var(--colorVioletGlow);
 }
 
-.cabeceraLogo:active,
-.menuEnlace:active,
-.menuEnlaceActivo:active {
+.headerLogo:active,
+.menuLink:active,
+.menuLinkActive:active {
     transform: scale(0.95);
 }
 
-.cargador {
+.loader {
     width: 28px;
     height: 28px;
-    border: 3px solid var(--colorBordeCristal);
-    border-top-color: var(--colorCian);
+    border: 3px solid var(--colorGlassBorder);
+    border-top-color: var(--colorCyan);
     border-radius: 50%;
-    animation: cargaDesvanecida 1s ease-in forwards;
+    animation: loaderFade 1s ease-in forwards;
 }
 
-@keyframes cargaDesvanecida {
+@keyframes loaderFade {
     0% {
         transform: rotate(0deg);
         opacity: 1;
@@ -162,5 +170,818 @@ ol {
     100% {
         transform: rotate(720deg);
         opacity: 0;
+    }
+}
+
+.home,
+.page,
+.detail {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 4rem;
+}
+
+.homeTitle,
+.pageTitle {
+    margin-bottom: 2rem;
+    font-size: 2.75rem;
+    text-align: center;
+}
+
+.featuredTitle,
+.aboutTitle,
+.libraryTitle,
+.podcastsTitle,
+.categoriesTitle {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: var(--colorCyan);
+}
+
+.featuredCard {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding: 1.5rem;
+}
+
+.featuredImage,
+.sidebarImage,
+.continueImage,
+.authorPhoto {
+    height: auto;
+    border-radius: 12px;
+}
+
+.featuredImage {
+    width: 45%;
+}
+
+.featuredText {
+    flex: 1;
+}
+
+.featuredEpisode {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.featuredInfo {
+    margin-bottom: 1rem;
+    color: var(--colorCyan);
+    font-weight: 500;
+}
+
+.featuredDescription {
+    margin-bottom: 1.5rem;
+}
+
+.podcastsBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.podcastsBadge,
+.episodeLabel,
+.featuredButton,
+.formButton {
+    width: fit-content;
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    background: var(--gradientMain);
+    color: var(--colorBackground);
+    font-weight: 600;
+}
+
+.featuredButton,
+.formButton {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    text-decoration: none;
+}
+
+.formButton {
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.featuredButton:hover,
+.formButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px var(--colorViolet);
+}
+
+.featuredButton:active,
+.formButton:active {
+    transform: scale(0.96);
+}
+
+.searchField,
+.formInput,
+.formTextarea {
+    width: 100%;
+    padding: 0.6rem 1.1rem;
+    border: 1px solid var(--colorGlassBorder);
+    background-color: var(--colorGlass);
+    color: var(--colorText);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color var(--transitionBase), box-shadow var(--transitionBase);
+}
+
+.searchField {
+    max-width: 320px;
+    border-radius: 999px;
+}
+
+.searchField:hover,
+.formInput:hover,
+.formTextarea:hover {
+    border-color: var(--colorCyan);
+}
+
+.searchField:focus,
+.searchField:focus-visible,
+.formInput:focus,
+.formInput:focus-visible,
+.formTextarea:focus,
+.formTextarea:focus-visible {
+    outline: none;
+    border-color: var(--colorViolet);
+    box-shadow: 0 0 0 3px var(--colorVioletGlow), 0 0 14px var(--colorViolet);
+}
+
+.searchField:active,
+.formInput:active,
+.formTextarea:active {
+    border-color: var(--colorBlue);
+}
+
+.podcastsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1.5rem;
+    row-gap: 8rem;
+    margin-top: 8rem;
+}
+
+.card,
+.valueCard,
+.form,
+.continueCard,
+.authorCard,
+.sidebar,
+.episodesCount,
+.episodeContent,
+.featuredCard {
+    border: 1px solid var(--colorGlassBorder);
+    border-radius: 16px;
+    background-color: var(--colorGlass);
+}
+
+.featuredButton,
+.formButton,
+.categoryScience,
+.categoryHistory,
+.categoryNature,
+.categoryLanguage,
+.categoryBody,
+.categorySpace,
+.continueCard,
+.authorCard,
+.valueCard {
+    transition: transform var(--transitionBase), box-shadow var(--transitionBase);
+}
+
+.card {
+    height: 100%;
+    text-align: center;
+    transition: transform var(--transitionBase), border-color var(--transitionBase), box-shadow var(--transitionBase);
+}
+
+.card:hover,
+.card:focus-within {
+    transform: translateY(-6px);
+    border-color: var(--colorCyan);
+    box-shadow: 0 0 18px var(--colorGlassBorder);
+}
+
+.card:active {
+    transform: translateY(-2px) scale(0.98);
+}
+
+.cardLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 0 1.25rem 1.5rem;
+    border-radius: 16px;
+    text-decoration: none;
+}
+
+.cardImage {
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    padding: 28px;
+    border: 3px solid var(--colorCyan);
+    border-radius: 50%;
+    background-color: var(--colorBackgroundDark);
+    object-fit: contain;
+    box-shadow: 0 0 16px var(--colorGlassBorder);
+}
+
+.cardTitle {
+    margin: 1rem 0 0.4rem;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.cardAuthor {
+    font-size: 0.95rem;
+}
+
+.categoriesTitle {
+    margin-top: 4rem;
+}
+
+.categoriesList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.categoriesLink,
+.authorLink,
+.backButton {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    border: 1px solid var(--colorCyan);
+    border-radius: 999px;
+    background-color: var(--colorGlass);
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color var(--transitionBase), border-color var(--transitionBase), color var(--transitionBase), transform var(--transitionBase);
+}
+
+.categoriesLink:hover,
+.authorLink:hover,
+.backButton:hover,
+.backButton:focus-visible {
+    border-color: var(--colorViolet);
+    background-color: var(--colorVioletGlow);
+    color: var(--colorText);
+}
+
+.categoriesLink:active,
+.authorLink:active,
+.backButton:active {
+    transform: scale(0.95);
+}
+
+.backButton {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin-bottom: 1.25rem;
+    padding: 0.3rem 0.9rem;
+    color: var(--colorTextSoft);
+    font-size: 0.875rem;
+}
+
+.searchField::placeholder,
+.cardAuthor,
+.featuredDescription,
+.sidebarDescription,
+.pageIntro,
+.categoryDescription,
+.continueRemaining,
+.authorQuote,
+.missionText,
+.valueText,
+.episodesTable td,
+.episodeInfo,
+.transcriptText,
+.footer {
+    color: var(--colorTextSoft);
+}
+
+.podcast,
+.podcastDefault,
+.episode,
+.episodeDefault {
+    display: none;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.podcast:target,
+.podcastDefault:target,
+.podcastList:not(:has(:target)) .podcastDefault,
+.episode:target,
+.episodeDefault:target,
+.episodeList:not(:has(:target)) .episodeDefault {
+    display: flex;
+}
+
+.sidebar {
+    flex: 0 0 300px;
+    padding: 1.5rem;
+}
+
+.sidebarImage {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.sidebarTitle,
+.sidebarAuthor {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--colorGlassBorder);
+}
+
+.sidebarTitle {
+    font-size: 1.9rem;
+}
+
+.sidebarAuthor {
+    color: var(--colorCyan);
+    font-weight: 500;
+}
+
+.sidebarImageLink {
+    display: block;
+    border-radius: 12px;
+    transition: opacity var(--transitionBase), transform var(--transitionBase);
+}
+
+.sidebarImageLink:hover {
+    opacity: 0.85;
+}
+
+.sidebarImageLink:active {
+    transform: scale(0.98);
+}
+
+.episodes {
+    flex: 1;
+    min-width: 0;
+}
+
+.episodesCount {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    padding: 0.6rem 1.4rem;
+    font-size: 1.5rem;
+}
+
+.episodesTable {
+    width: 100%;
+    border: 1px solid var(--colorGlassBorder);
+    border-collapse: collapse;
+    background-color: var(--colorGlass);
+}
+
+.episodesTable th,
+.episodesTable td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--colorGlassBorder);
+    text-align: left;
+}
+
+.episodesTable th {
+    background-color: var(--colorBackgroundDark);
+    color: var(--colorCyan);
+    font-family: var(--fontTitles);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.episodesLink,
+.categoryLink,
+.continueLink,
+.sidebarLink,
+.episodeLink,
+.transcriptSummary {
+    text-decoration: none;
+    transition: color var(--transitionBase);
+}
+
+.episodesLink,
+.categoryLink,
+.continueLink {
+    color: var(--colorText);
+    font-weight: 500;
+}
+
+.episodeLink {
+    color: var(--colorCyan);
+    font-weight: 600;
+}
+
+.episodesLink:hover,
+.categoryLink:hover,
+.continueLink:hover,
+.sidebarLink:hover,
+.episodeLink:hover {
+    color: var(--colorCyan);
+    text-decoration: underline;
+}
+
+.episodesLink:active,
+.categoryLink:active,
+.continueLink:active,
+.sidebarLink:active,
+.episodeLink:active {
+    color: var(--colorViolet);
+}
+
+.episodeContent {
+    flex: 1;
+    min-width: 0;
+    padding: 2rem;
+}
+
+.episodeTitle {
+    margin: 1rem 0 0.5rem;
+    font-size: 2.4rem;
+}
+
+.episodeInfo {
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.episodeText {
+    margin-bottom: 1rem;
+}
+
+.episodeAudio {
+    display: block;
+    width: 100%;
+    margin: 1.5rem 0;
+    border: 1px solid var(--colorCyan);
+    border-radius: 999px;
+    box-shadow: 0 0 14px var(--colorGlassBorder);
+}
+
+.transcript {
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--colorGlassBorder);
+    border-radius: 12px;
+    background-color: var(--colorBackgroundDark);
+}
+
+.transcriptSummary {
+    color: var(--colorCyan);
+    font-family: var(--fontTitles);
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.transcriptSummary:hover {
+    color: var(--colorText);
+}
+
+.transcriptText {
+    margin-top: 0.75rem;
+}
+
+.footer {
+    margin-top: auto;
+    padding: 1.5rem 2rem;
+    border-top: 1px solid var(--colorGlassBorder);
+    background-color: var(--colorGlass);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.pageIntro {
+    max-width: 640px;
+    margin: -1rem auto 2.5rem;
+    text-align: center;
+}
+
+.categoryGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.categoryScience,
+.categoryHistory,
+.categoryNature,
+.categoryLanguage,
+.categoryBody,
+.categorySpace {
+    padding: 1.5rem;
+    border: 1px solid;
+    border-top-width: 4px;
+    border-radius: 16px;
+    background-color: var(--colorGlass);
+}
+
+.categoryScience {
+    border-color: var(--colorCyan);
+}
+
+.categoryHistory {
+    border-color: var(--colorAmber);
+}
+
+.categoryNature {
+    border-color: var(--colorGreen);
+}
+
+.categoryLanguage {
+    border-color: var(--colorViolet);
+}
+
+.categoryBody {
+    border-color: var(--colorPink);
+}
+
+.categorySpace {
+    border-color: var(--colorBlue);
+}
+
+.categoryScience:hover,
+.categoryHistory:hover,
+.categoryNature:hover,
+.categoryLanguage:hover,
+.categoryBody:hover,
+.categorySpace:hover,
+.continueCard:hover,
+.authorCard:hover,
+.valueCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 18px var(--colorGlassBorder);
+}
+
+.categoryScience:target,
+.categoryHistory:target,
+.categoryNature:target,
+.categoryLanguage:target,
+.categoryBody:target,
+.categorySpace:target {
+    box-shadow: 0 0 24px var(--colorViolet);
+}
+
+.categoryTitle {
+    font-size: 1.75rem;
+}
+
+.categoryCount {
+    margin: 0.25rem 0 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.categoryDescription {
+    margin-bottom: 1rem;
+}
+
+.categoryList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--colorGlassBorder);
+}
+
+.continueList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.continueCard {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+    padding: 1.25rem;
+}
+
+.continueImage {
+    flex: 0 0 80px;
+}
+
+.continueText {
+    flex: 1;
+    min-width: 0;
+}
+
+.continuePodcast {
+    color: var(--colorCyan);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.continueTitle {
+    margin: 0.25rem 0 0.75rem;
+    font-size: 1.3rem;
+}
+
+.continueProgress {
+    width: 100%;
+    height: 8px;
+    accent-color: var(--colorCyan);
+}
+
+.continueRemaining {
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.authorsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.authorCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.authorPhoto {
+    width: 180px;
+    margin-bottom: 1rem;
+    border: 2px solid var(--colorViolet);
+    box-shadow: 0 0 14px var(--colorVioletGlow);
+}
+
+.authorName {
+    font-size: 1.5rem;
+}
+
+.authorPodcast {
+    color: var(--colorCyan);
+    font-weight: 500;
+}
+
+.authorQuote {
+    margin: 0.75rem 0 1.25rem;
+    font-style: italic;
+}
+
+.authorLink {
+    margin-top: auto;
+}
+
+.aboutTitle {
+    margin-top: 3rem;
+}
+
+.missionText {
+    max-width: 760px;
+    margin-bottom: 1rem;
+}
+
+.valuesList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.valueCard {
+    height: 100%;
+    padding: 1.5rem;
+}
+
+.valueTitle {
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    max-width: 560px;
+    margin-top: 1.5rem;
+    padding: 2rem;
+}
+
+.formLabel {
+    font-weight: 600;
+}
+
+.formInput,
+.formTextarea {
+    margin-bottom: 1rem;
+    border-radius: 12px;
+}
+
+.formTextarea {
+    resize: vertical;
+}
+
+@media (max-width: 1024px) {
+    .podcastsGrid,
+    .categoryGrid,
+    .continueList,
+    .authorsGrid,
+    .valuesList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sidebar {
+        flex-basis: 240px;
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .menu {
+        order: 3;
+        width: 100%;
+    }
+
+    .menuList {
+        justify-content: center;
+    }
+
+    .home,
+    .page,
+    .detail {
+        padding: 1.5rem 1rem 3rem;
+    }
+
+    .homeTitle,
+    .pageTitle {
+        font-size: 2.1rem;
+    }
+
+    .podcastsGrid,
+    .categoryGrid,
+    .continueList,
+    .authorsGrid,
+    .valuesList {
+        grid-template-columns: 1fr;
+    }
+
+    .featuredCard,
+    .podcast,
+    .podcastDefault,
+    .episode,
+    .episodeDefault {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .featuredImage {
+        width: 100%;
+    }
+
+    .sidebar {
+        flex: none;
+    }
+
+    .sidebarImage {
+        max-width: 220px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .episodeContent,
+    .form {
+        padding: 1.25rem;
+    }
+
+    .episodeTitle {
+        font-size: 1.9rem;
+    }
+
+    .episodesTable th,
+    .episodesTable td {
+        padding: 0.6rem 0.5rem;
+        font-size: 0.9rem;
     }
 }
