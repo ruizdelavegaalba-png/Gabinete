@@ -118,6 +118,13 @@ All the names in the code (classes, ids and CSS variables) are in English and in
 - Images and audio hosted on Cloudinary.
 - Fonts from Google Fonts (Barlow and Barlow Condensed).
 
+---
+## HTML validation
+
+I checked all the pages with the [W3C Markup Validation Service](https://validator.w3.org/). All of them pass with no errors.
+
+<img width="911" height="432" alt="image" src="https://github.com/user-attachments/assets/70027f91-1ac4-4722-b058-874dd2a3fe01" />
+
 ## Author
 
-Alba Ruiz de la Vega · DAW · CEI · 2026
+Alba Ruiz de la Vega 
