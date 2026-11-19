@@ -213,7 +213,7 @@ ol {
 .authorPhoto,
 .cardImage {
     height: auto;
-    border-radius: 12px;
+    border-radius: 24px;
 }
 
 .featuredImage {
@@ -515,7 +515,7 @@ ol {
 
 .sidebarImageLink {
     display: block;
-    border-radius: 12px;
+    border-radius: 24px;
     transition: opacity var(--transitionBase), transform var(--transitionBase);
 }
 
